@@ -74,13 +74,13 @@ logic [mask_length_gp-1:0] barrier_r,      barrier_n,
 
 						   
 logic bubble;
+logic flush;
 // stages input & output
 fd_s fd_s_i, fd_s_o;
 dx_s dx_s_i, dx_s_o;
 xm_s xm_s_i, xm_s_o;
 mw_s mw_s_i, mw_s_o;
 
-logic fd_wen, dx_wen, xm_wen, mw_wen;
 logic [31:0] rf_wd_mw_n;
 
 //connecting stages
@@ -89,7 +89,8 @@ assign fd_s_i = '{instruction_fd    : instruction
                  };
 
 FD_reg fd_reg(.clk(clk)
-			 ,.wen_i(fd_wen)
+			 ,.stall(stall)
+			 ,.flush(flush)
 		     ,.fd_s_i(fd_s_i)
              ,.fd_s_o(fd_s_o)
 			 );
@@ -106,7 +107,9 @@ assign dx_s_i = '{instruction_dx	: fd_s_o.instruction_fd
 				 };
 				 
 DX_reg dx_reg(.clk(clk)
-			 ,.wen_i(dx_wen)
+			 ,.stall(stall)
+			 ,.flush(flush)
+			 ,.bubble(bubble)
 		     ,.dx_s_i(dx_s_i)
              ,.dx_s_o(dx_s_o)
 			 );
@@ -122,7 +125,7 @@ assign xm_s_i = '{instruction_xm	: dx_s_o.instruction_dx
 				 };
 				 
 XM_reg xm_reg(.clk(clk)
-			 ,.wen_i(xm_wen)
+			 ,.stall(stall)
 			 ,.xm_s_i(xm_s_i)
 			 ,.xm_s_o(xm_s_o)
 			 );
@@ -141,7 +144,7 @@ begin
 end
 				 
 MW_reg mw_reg(.clk(clk)
-			 ,.wen_i(mw_wen)
+			 ,.stall(stall)
 			 ,.mw_s_i(mw_s_i)
 			 ,.mw_s_o(mw_s_o)
 			 );
@@ -225,22 +228,26 @@ always_comb
       PC_n = net_packet_i.net_addr;
     else
       unique casez (dx_s_o.instruction_dx)
-        `kJALR: // TODO: stall fetch stage three times, flush decode, write pc 
+        `kJALR: // TODO: stall fetch stage, flush decode, write pc 
           PC_n = alu_result[0+:imem_addr_width_p];
 		  fd_wen = 1'b0;	// stall fetch stage
 		  dx_wen = 1'b0;	// stall decode stage
+		  flush = 1'b0;
 
         `kBNEQZ,`kBEQZ,`kBLTZ,`kBGTZ: // flush fetch and decode
           if (jump_now)
             PC_n = imm_jump_add;
 			fd_wen = 1'b0;
 			dx_wen = 1'b0;
+			flush = 1'b0;
 
         default: begin end
       endcase
   end
+  
 
-assign PC_wen = (net_PC_write_cmd_IDLE || ~stall);
+
+assign PC_wen = (net_PC_write_cmd_IDLE || ~stall || ~bubble);
 
 // Sequential part, including PC, barrier, exception and state
 always_ff @ (posedge clk)

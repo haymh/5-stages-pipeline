@@ -44,6 +44,7 @@
 // 29
 // 30
 // 31
+`define kNOP		16'b11111_?????_??????
 
 //---- Controller states ----//
 // WORK state means start of any operation or wait for the 
