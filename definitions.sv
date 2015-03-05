@@ -133,12 +133,12 @@ typedef struct packed {
 
 typedef struct packed{
 	instruction_s instruction_fd;
-	logic [imem_addr_width_p-1:0] PC_r_fd;
+	logic [imem_addr_width_gp-1:0] PC_r_fd;
 } fd_s;
 
 typedef struct packed{
 	instruction_s instruction_dx;
-	logic [imem_addr_width_p-1:0] PC_r_dx;
+	logic [imem_addr_width_gp-1:0] PC_r_dx;
 	logic [31:0] rs_val_dx;
 	logic [31:0] rd_val_dx;
 	logic is_load_op_c_dx;
@@ -150,7 +150,7 @@ typedef struct packed{
 
 typedef struct packed{
 	instruction_s instruction_xm;
-	logic [imem_addr_width_p-1:0] PC_r_xm;
+	logic [imem_addr_width_gp-1:0] PC_r_xm;
 	logic [31:0] alu_result_xm;
 	logic is_load_op_c_xm;
 	logic op_writes_rf_c_xm;
@@ -161,6 +161,7 @@ typedef struct packed{
 
 typedef struct packed{
 	instruction_s instruction_mw;
+	logic [imem_addr_width_gp-1:0] PC_r_mw;
 	logic [31:0] rf_wd_mw;
 	logic op_writes_rf_c_mw;
 } mw_s;

@@ -17,9 +17,9 @@ begin
 		fd_s_o.PC_r_fd <= fd_s_o.PC_r_fd;
 	end
 	else if(stall)
-	begin
+		fd_s_o <= fd_s_o;
+	else
 		fd_s_o <= fd_s_i;
-	end
 end
 
 endmodule

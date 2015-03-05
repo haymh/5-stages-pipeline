@@ -10,9 +10,9 @@
 
 // TODO: Edit the file names below to match your Assembler output files.
 // read from assembled files and store in buffers
-   `define hex_i_file "./XROR_test_i.hex"
-   `define hex_r_file "./XROR_test_r.hex"
-   `define hex_d_file "./XROR_test_d.hex"
+   `define hex_i_file "./tester_i.hex"
+   `define hex_r_file "./tester_r.hex"
+   `define hex_d_file "./tester_d.hex"
 
 module core_tb();
 
@@ -208,7 +208,7 @@ assign data_mem_addr = select ? data_mem_addr1 : data_mem_addr2;
 end
 
 `ifdef DISASSEMBLE
-`include "disassemble.v"
+`include "disassemble.sv"
 `endif
 
 // Clock generator

@@ -75,6 +75,7 @@ logic [mask_length_gp-1:0] barrier_r,      barrier_n,
 						   
 logic bubble;
 logic flush;
+logic [1:0] fwd_a,fwd_b;
 // stages input & output
 fd_s fd_s_i, fd_s_o;
 dx_s dx_s_i, dx_s_o;
@@ -95,14 +96,14 @@ FD_reg fd_reg(.clk(clk)
              ,.fd_s_o(fd_s_o)
 			 );
 			 
-assign dx_s_i = '{instruction_dx	: fd_s_o.instruction_fd
-				  PC_r_dx			: fd_s_o.PC_r_fd
-				  rs_val_dx			: rs_val
-				  rd_val_dx			: rd_val
-				  is_load_op_c_dx	: is_load_op_c
-				  op_writes_rf_c_dx : op_writes_rf_c
-				  is_store_op_c_dx	: is_store_op_c
-				  is_mem_op_c_dx	: is_mem_op_c
+assign dx_s_i = '{instruction_dx	: fd_s_o.instruction_fd,
+				  PC_r_dx			: fd_s_o.PC_r_fd,
+				  rs_val_dx			: rs_val,
+				  rd_val_dx			: rd_val,
+				  is_load_op_c_dx	: is_load_op_c,
+				  op_writes_rf_c_dx : op_writes_rf_c,
+				  is_store_op_c_dx	: is_store_op_c,
+				  is_mem_op_c_dx	: is_mem_op_c,
 				  is_byte_op_c_dx	: is_byte_op_c
 				 };
 				 
@@ -114,13 +115,13 @@ DX_reg dx_reg(.clk(clk)
              ,.dx_s_o(dx_s_o)
 			 );
 				 
-assign xm_s_i = '{instruction_xm	: dx_s_o.instruction_dx
-				  PC_r_xm			: dx_s_o.PC_r_dx
-				  alu_result_xm		: alu_result
-				  is_load_op_c_xm	: dx_s_o.is_load_op_c_dx
-				  op_writes_rf_c_xm : dx_s_o.op_writes_rf_c_dx
-				  is_store_op_c_xm	: dx_s_o.is_store_op_c_dx
-				  is_mem_op_c_xm	: dx_s_o.is_mem_op_c_dx
+assign xm_s_i = '{instruction_xm	: dx_s_o.instruction_dx,
+				  PC_r_xm			: dx_s_o.PC_r_dx,
+				  alu_result_xm		: alu_result,
+				  is_load_op_c_xm	: dx_s_o.is_load_op_c_dx,
+				  op_writes_rf_c_xm : dx_s_o.op_writes_rf_c_dx,
+				  is_store_op_c_xm	: dx_s_o.is_store_op_c_dx,
+				  is_mem_op_c_xm	: dx_s_o.is_mem_op_c_dx,
 				  is_byte_op_c_xm	: dx_s_o.is_byte_op_c_dx
 				 };
 				 
@@ -130,10 +131,11 @@ XM_reg xm_reg(.clk(clk)
 			 ,.xm_s_o(xm_s_o)
 			 );
 			 
-assign mw_s_i = '{instruction_mw	: xm_s_o.instruction_xm
-				  rf_wd_mw			: rf_wd_mw_n	// either alu_result or memory out data
+assign mw_s_i = '{instruction_mw	: xm_s_o.instruction_xm,
+				  PC_r_mw			: xm_s_o.PC_r_xm,
+				  rf_wd_mw			: rf_wd_mw_n,	// either alu_result or memory out data
 				  op_writes_rf_c_mw : xm_s_o.op_writes_rf_c_xm
-				 }
+				 };
 
 always_comb
 begin
@@ -191,9 +193,29 @@ reg_file #(.NUM_REG($bits(instruction.rs_imm))) rf
 			 ,.wa_i(rd_addr)
           );
 
-assign rs_val_or_zero = dx_s_o.instruction_dx.rs_imm ? dx_s_o.rs_val_dx : 32'b0;
-assign rd_val_or_zero = dx_s_o.instruction_dx.rd     ? dx_s_o.rd_val_dx : 32'b0;
 
+always_comb
+begin
+	unique casez (fwd_a)
+	  2'b10:
+		rs_val_or_zero = xm_s_o.alu_result_xm;
+	  2'b01:
+		rs_val_or_zero = rf_wd;
+	  default:
+		rs_val_or_zero = dx_s_o.instruction_dx.rs_imm ? dx_s_o.rs_val_dx : 32'b0;
+	endcase
+end	
+always_comb
+begin
+	unique casez(fwd_b)
+	  2'b10:
+		rd_val_or_zero = xm_s_o.alu_result_xm;
+	  2'b01:
+		rd_val_or_zero = rf_wd;
+	  default:
+		rd_val_or_zero = dx_s_o.instruction_dx.rd     ? dx_s_o.rd_val_dx : 32'b0;
+	  endcase
+end
 // ALU
 alu alu_1 (.rd_i(rd_val_or_zero)
           ,.rs_i(rs_val_or_zero)
@@ -210,7 +232,7 @@ always_comb
       rf_wd = net_packet_i.net_data;
 
     else if (mw_s_o.instruction_mw==?`kJALR)
-      rf_wd = mw_s_o.PC_r_xm + 1;
+      rf_wd = mw_s_o.PC_r_mw + 1;
 
     else
       rf_wd = mw_s_o.rf_wd_mw;
@@ -230,22 +252,28 @@ always_comb
       unique casez (dx_s_o.instruction_dx)
         `kJALR: // TODO: stall fetch stage, flush decode, write pc 
           PC_n = alu_result[0+:imem_addr_width_p];
-		  fd_wen = 1'b0;	// stall fetch stage
-		  dx_wen = 1'b0;	// stall decode stage
-		  flush = 1'b0;
-
         `kBNEQZ,`kBEQZ,`kBLTZ,`kBGTZ: // flush fetch and decode
           if (jump_now)
             PC_n = imm_jump_add;
-			fd_wen = 1'b0;
-			dx_wen = 1'b0;
-			flush = 1'b0;
-
         default: begin end
       endcase
   end
   
-
+always_comb
+begin
+	if(dx_s_o.instruction_dx==?`kJALR)
+		flush = 1'b1;
+	else
+		flush = jump_now;
+end
+  
+hazard_detection hazard (.dx_s_o(dx_s_o),
+						 .xm_s_o(xm_s_o),
+						 .mw_s_o(mw_s_o),
+						 .bubble(bubble),
+						 .fwd_a(fwd_a),
+						 .fwd_b(fwd_b)
+                  );
 
 assign PC_wen = (net_PC_write_cmd_IDLE || ~stall || ~bubble);
 

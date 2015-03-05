@@ -11,9 +11,9 @@ module MW_reg
 always_ff @(posedge clk) //enable SystemVerilog to make always_ff work!
 begin
 	if(stall)
-	begin
+		mw_s_o <= mw_s_o;
+	else
 		mw_s_o <= mw_s_i;
-	end
 end
 
 endmodule

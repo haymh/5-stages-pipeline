@@ -28,6 +28,8 @@ begin
 	begin
 		dx_s_o <= dx_s_o;
 	end
+	else
+		dx_s_o <= dx_s_i;
 end
 
 endmodule
