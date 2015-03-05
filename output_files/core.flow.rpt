@@ -1,5 +1,5 @@
 Flow report for core
-Thu Mar 05 00:25:02 2015
+Thu Mar 05 02:22:02 2015
 Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
 
 
@@ -41,15 +41,15 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Thu Mar 05 00:25:02 2015      ;
+; Flow Status                        ; Successful - Thu Mar 05 02:22:02 2015      ;
 ; Quartus II 64-Bit Version          ; 14.0.0 Build 200 06/17/2014 SJ Web Edition ;
 ; Revision Name                      ; core                                       ;
 ; Top-level Entity Name              ; core                                       ;
 ; Family                             ; Cyclone IV E                               ;
 ; Device                             ; EP4CE40F29C6                               ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 1,733 / 39,600 ( 4 % )                     ;
-;     Total combinational functions  ; 1,628 / 39,600 ( 4 % )                     ;
+; Total logic elements               ; 1,719 / 39,600 ( 4 % )                     ;
+;     Total combinational functions  ; 1,626 / 39,600 ( 4 % )                     ;
 ;     Dedicated logic registers      ; 370 / 39,600 ( < 1 % )                     ;
 ; Total registers                    ; 370                                        ;
 ; Total pins                         ; 272 / 533 ( 51 % )                         ;
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/05/2015 00:23:58 ;
+; Start date & time ; 03/05/2015 02:20:43 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; core                ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ agreement for further details.
 +-------------------------------------+---------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                           ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 29541441021785.142554383801876  ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 105564169643990.142555084304516 ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Systemverilog Hdl               ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (SystemVerilog) ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                              ; --            ; --          ; --             ;
@@ -94,12 +94,12 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:06     ; 1.0                     ; 579 MB              ; 00:00:06                           ;
-; Fitter                    ; 00:00:43     ; 1.0                     ; 857 MB              ; 00:00:43                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 509 MB              ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 596 MB              ; 00:00:03                           ;
-; EDA Netlist Writer        ; 00:00:03     ; 1.0                     ; 484 MB              ; 00:00:02                           ;
-; Total                     ; 00:00:58     ; --                      ; --                  ; 00:00:56                           ;
+; Analysis & Synthesis      ; 00:00:11     ; 1.0                     ; 569 MB              ; 00:00:10                           ;
+; Fitter                    ; 00:00:46     ; 1.0                     ; 847 MB              ; 00:00:45                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 512 MB              ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:06     ; 1.0                     ; 586 MB              ; 00:00:05                           ;
+; EDA Netlist Writer        ; 00:00:04     ; 1.0                     ; 474 MB              ; 00:00:03                           ;
+; Total                     ; 00:01:09     ; --                      ; --                  ; 00:01:05                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -108,11 +108,11 @@ agreement for further details.
 +---------------------------+------------------+-----------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; Meng             ; Windows 7 ; 6.2        ; x86_64         ;
-; Fitter                    ; Meng             ; Windows 7 ; 6.2        ; x86_64         ;
-; Assembler                 ; Meng             ; Windows 7 ; 6.2        ; x86_64         ;
-; TimeQuest Timing Analyzer ; Meng             ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; Meng             ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; heng             ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; heng             ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; heng             ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; heng             ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; heng             ; Windows 7 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 

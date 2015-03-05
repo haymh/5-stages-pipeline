@@ -164,6 +164,7 @@ assign to_mem_o = '{write_data    : rs_val_or_zero
                    ,yumi          : yumi_to_mem_c
                    };
 assign data_mem_addr = xm_s_o.alu_result_xm;
+//assign data_mem_addr = alu_result;
 
 // DEBUG Struct
 assign debug_o = {PC_r, instruction, state_r, barrier_mask_r, barrier_r};
@@ -187,7 +188,7 @@ reg_file #(.NUM_REG($bits(instruction.rs_imm))) rf
           ,.ra0_i(fd_s_o.instruction_fd.rs_imm)
           ,.ra1_i(fd_s_o.instruction_fd.rd)
           ,.wen_i(rf_wen)
-          ,.wd_i(mw_s_o.rf_wd_mw)  
+          ,.wd_i(rf_wd)  
           ,.rd0_o(rs_val)
           ,.rd1_o(rd_val)
 			 ,.wa_i(rd_addr)
