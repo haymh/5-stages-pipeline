@@ -267,7 +267,10 @@ begin
 		flush = jump_now;
 end
   
-hazard_detection hazard (.dx_s_o(dx_s_o),
+hazard_detection hazard (.is_load_op_o(is_load_op_c),
+						 .is_store_op_o(is_store_op_c),
+						 .fd_s_o(fd_s_o),
+						 .dx_s_o(dx_s_o),
 						 .xm_s_o(xm_s_o),
 						 .mw_s_o(mw_s_o),
 						 .bubble(bubble),
@@ -372,7 +375,7 @@ assign barrier_o = barrier_mask_r & barrier_r;
 assign imem_wen  = net_imem_write_cmd;
 
 // Register write could be from network or the controller
-assign rf_wen    = (net_reg_write_cmd || (mw_s_o.op_writes_rf_c_mw && ~stall));
+assign rf_wen    = (net_reg_write_cmd || (mw_s_o.op_writes_rf_c_mw && ~stall && ~bubble));
 
 // Selection between network and core for instruction address
 assign imem_addr = (net_imem_write_cmd) ? net_packet_i.net_addr

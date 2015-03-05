@@ -19,7 +19,7 @@ Z9 8C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/alu.sv
 Z10 FC:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/alu.sv
 L0 4
 Z11 OV;L;10.1e;51
-Z12 !s108 1425540569.999000
+Z12 !s108 1425543951.970000
 Z13 !s107 definitions.sv|C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/alu.sv|
 Z14 !s90 -reportprogress|300|-work|work|C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/alu.sv|
 Z15 o-work work -O0
@@ -65,7 +65,7 @@ Z26 8C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/cl_decode.sv
 Z27 FC:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/cl_decode.sv
 L0 4
 R11
-Z28 !s108 1425540570.068000
+Z28 !s108 1425543952.046000
 Z29 !s107 definitions.sv|C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/cl_decode.sv|
 Z30 !s90 -reportprogress|300|-work|work|C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/cl_decode.sv|
 R15
@@ -111,7 +111,7 @@ Z39 8C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/cl_state_machine.
 Z40 FC:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/cl_state_machine.sv
 L0 3
 R11
-Z41 !s108 1425540570.137000
+Z41 !s108 1425543952.111000
 Z42 !s107 definitions.sv|C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/cl_state_machine.sv|
 Z43 !s90 -reportprogress|300|-work|work|C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/cl_state_machine.sv|
 R15
@@ -147,20 +147,20 @@ Z47 DXx4 work 12 core_sv_unit 0 22 joIo7<<i:>MafOYBB^=;d2
 Z48 V8g;U8en<PLBg@@AL4CL>f3
 r1
 31
-Z49 !s100 84Wd_O4Of@K33Q;]Rb6nB2
-Z50 IR]Q^5_3GLhfbZlL:>T_LM1
-Z51 !s105 core_sv_unit
+Z49 I;=SO;DAbak=X[P4B7SThU0
+Z50 !s105 core_sv_unit
 S1
 R7
-Z52 w1425540059
-Z53 8C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/core.sv
-Z54 FC:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/core.sv
+Z51 w1425543748
+Z52 8C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/core.sv
+Z53 FC:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/core.sv
 L0 3
 R11
-Z55 !s108 1425540570.208000
-Z56 !s107 definitions.sv|C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/core.sv|
-Z57 !s90 -reportprogress|300|-work|work|C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/core.sv|
+Z54 !s108 1425543952.182000
+Z55 !s107 definitions.sv|C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/core.sv|
+Z56 !s90 -reportprogress|300|-work|work|C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/core.sv|
 R15
+Z57 !s100 ^YGBQ`P9zC`1om43Y4n=E0
 !s85 0
 !i10b 1
 !s101 -O0
@@ -180,7 +180,7 @@ Z63 8C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/core_flattened.sv
 Z64 FC:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/core_flattened.sv
 L0 4
 R11
-Z65 !s108 1425540570.299000
+Z65 !s108 1425543952.269000
 Z66 !s107 definitions.sv|C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/core_flattened.sv|
 Z67 !s90 -reportprogress|30|-work|work|C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/core_flattened.sv|
 R15
@@ -219,15 +219,15 @@ Z72 !s100 6@VRo[@On;JAFF[^[A0Rn2
 Z73 IjoIo7<<i:>MafOYBB^=;d2
 S1
 R7
+R51
 R52
 R53
-R54
 R20
 L1 54
 R11
+R54
 R55
 R56
-R57
 R15
 !s85 0
 !i10b 1
@@ -239,21 +239,21 @@ Z74 DXx4 work 15 core_tb_sv_unit 0 22 X^?3==Y2=kgo1eZ=o>Lb20
 Z75 VlN3iUPNV?OYGNgj@DJaoE2
 r1
 31
-Z76 IK=eGn7aVz3_Ck@=hMmYgS3
-Z77 !s105 core_tb_sv_unit
+Z76 !s100 2j@:KbYYS6We>=Jm6mTY]1
+Z77 IK=eGn7aVz3_Ck@=hMmYgS3
+Z78 !s105 core_tb_sv_unit
 S1
 R7
-Z78 w1425540555
-Z79 8C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/core_tb.sv
-Z80 FC:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/core_tb.sv
-Z81 Fdisassemble.sv
+Z79 w1425540555
+Z80 8C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/core_tb.sv
+Z81 FC:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/core_tb.sv
+Z82 Fdisassemble.sv
 L0 17
 R11
-Z82 !s108 1425540570.382000
-Z83 !s107 disassemble.sv|definitions.sv|C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/core_tb.sv|
-Z84 !s90 -reportprogress|30|-work|work|C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/core_tb.sv|
+Z83 !s108 1425543952.361000
+Z84 !s107 disassemble.sv|definitions.sv|C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/core_tb.sv|
+Z85 !s90 -reportprogress|30|-work|work|C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/core_tb.sv|
 R15
-Z85 !s100 2j@:KbYYS6We>=Jm6mTY]1
 !s85 0
 !i10b 1
 !s101 -O0
@@ -266,15 +266,15 @@ Z87 !s100 MVjMSbolD7Ai`@O3K`Q?J0
 Z88 IX^?3==Y2=kgo1eZ=o>Lb20
 S1
 R7
-R78
 R79
 R80
+R81
 R20
 L1 54
 R11
-R82
 R83
 R84
+R85
 R15
 !s85 0
 !i10b 1
@@ -296,7 +296,7 @@ Z94 8C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/data_mem.sv
 Z95 FC:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/data_mem.sv
 L0 11
 R11
-Z96 !s108 1425540570.483000
+Z96 !s108 1425543952.452000
 Z97 !s107 definitions.sv|C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/data_mem.sv|
 Z98 !s90 -reportprogress|30|-work|work|C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/data_mem.sv|
 R15
@@ -342,7 +342,7 @@ r1
 31
 Z107 !s90 -reportprogress|30|-work|work|C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/definitions.sv|
 R15
-Z108 !s108 1425540570.575000
+Z108 !s108 1425543952.536000
 Z109 !s107 C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/definitions.sv|
 !i10b 1
 !i103 1
@@ -364,7 +364,7 @@ Z116 8C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/DX_reg.sv
 Z117 FC:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/DX_reg.sv
 L0 3
 R11
-Z118 !s108 1425540570.696000
+Z118 !s108 1425543952.650000
 Z119 !s107 definitions.sv|C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/DX_reg.sv|
 Z120 !s90 -reportprogress|30|-work|work|C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/DX_reg.sv|
 R15
@@ -412,7 +412,7 @@ Z132 8C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/FD_reg.sv
 Z133 FC:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/FD_reg.sv
 L0 3
 R11
-Z134 !s108 1425540570.787000
+Z134 !s108 1425543952.732000
 Z135 !s107 definitions.sv|C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/FD_reg.sv|
 Z136 !s90 -reportprogress|30|-work|work|C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/FD_reg.sv|
 R15
@@ -446,46 +446,46 @@ Z141 n@f@d_reg_sv_unit
 !s101 -O0
 vhazard_detection
 R1
-Z142 DXx4 work 24 hazard_detection_sv_unit 0 22 BYPfJ8BV7@?[RoEW0gRYB3
-Z143 V^?Rf2J97Cm6ak=_7G=XPT2
+Z142 DXx4 work 24 hazard_detection_sv_unit 0 22 ?Dd6FhZ1nC5i=FPc8fbLe2
+Z143 V9BMbPgkRlb2bU2>BB6QCY2
 r1
 31
-Z144 !s100 9ZIZ_G?3N:nST_k9H<jk92
-Z145 I8JWejEilNIkMGVIdn42gj1
-Z146 !s105 hazard_detection_sv_unit
+Z144 IPNNKRPmPdV=eaHX0jh53L1
+Z145 !s105 hazard_detection_sv_unit
 S1
 R7
-Z147 w1425539365
-Z148 8C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/hazard_detection.sv
-Z149 FC:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/hazard_detection.sv
+Z146 w1425543835
+Z147 8C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/hazard_detection.sv
+Z148 FC:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/hazard_detection.sv
 L0 3
 R11
-Z150 !s108 1425540570.870000
-Z151 !s107 definitions.sv|C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/hazard_detection.sv|
-Z152 !s90 -reportprogress|30|-work|work|C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/hazard_detection.sv|
+Z149 !s108 1425543952.823000
+Z150 !s107 definitions.sv|C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/hazard_detection.sv|
+Z151 !s90 -reportprogress|30|-work|work|C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/hazard_detection.sv|
 R15
+Z152 !s100 bLE2CLiU_n]^7j_LP1^EK1
 !s85 0
 !i10b 1
 !s101 -O0
 Xhazard_detection_sv_unit
 R1
-Z153 VBYPfJ8BV7@?[RoEW0gRYB3
+Z153 V?Dd6FhZ1nC5i=FPc8fbLe2
 r1
 31
-Z154 !s100 C[M5[G@J9nomPlSFNJKF?3
-Z155 IBYPfJ8BV7@?[RoEW0gRYB3
+Z154 I?Dd6FhZ1nC5i=FPc8fbLe2
 S1
 R7
-R19
+R146
+R147
 R148
-R149
 R20
 L1 54
 R11
+R149
 R150
 R151
-R152
 R15
+Z155 !s100 8jK81h017?TXMPnY1oMNb3
 !s85 0
 !i10b 1
 !i103 1
@@ -506,7 +506,7 @@ Z161 8C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/instr_mem.sv
 Z162 FC:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/instr_mem.sv
 L0 5
 R11
-Z163 !s108 1425540570.952000
+Z163 !s108 1425543952.915000
 Z164 !s107 definitions.sv|C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/instr_mem.sv|
 Z165 !s90 -reportprogress|30|-work|work|C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/instr_mem.sv|
 R15
@@ -550,10 +550,10 @@ R7
 R8
 Z174 8C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/miner_tb.sv
 Z175 FC:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/miner_tb.sv
-R81
+R82
 L0 22
 R11
-Z176 !s108 1425540571.045000
+Z176 !s108 1425543952.998000
 Z177 !s107 disassemble.sv|definitions.sv|C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/miner_tb.sv|
 Z178 !s90 -reportprogress|30|-work|work|C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/miner_tb.sv|
 R15
@@ -599,7 +599,7 @@ Z188 8C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/MW_reg.sv
 Z189 FC:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/MW_reg.sv
 L0 3
 R11
-Z190 !s108 1425540571.137000
+Z190 !s108 1425543953.089000
 Z191 !s107 definitions.sv|C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/MW_reg.sv|
 Z192 !s90 -reportprogress|30|-work|work|C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/MW_reg.sv|
 R15
@@ -646,7 +646,7 @@ Z202 FC:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/net_packet_logge
 R20
 L1 54
 R11
-Z203 !s108 1425540571.220000
+Z203 !s108 1425543953.173000
 Z204 !s107 definitions.sv|C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/net_packet_logger_s.sv|
 Z205 !s90 -reportprogress|30|-work|work|C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/net_packet_logger_s.sv|
 R15
@@ -696,7 +696,7 @@ Z217 !s90 -reportprogress|30|-work|work|C:/Users/heng_2/Desktop/fucked up 141 L/
 R15
 !i10b 1
 !s85 0
-Z218 !s108 1425540571.303000
+Z218 !s108 1425543953.265000
 Z219 !s107 C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/reg_file.sv|
 !s101 -O0
 vXM_reg
@@ -717,7 +717,7 @@ Z226 8C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/XM_reg.sv
 Z227 FC:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/XM_reg.sv
 L0 3
 R11
-Z228 !s108 1425540571.375000
+Z228 !s108 1425543953.328000
 Z229 !s107 definitions.sv|C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/XM_reg.sv|
 Z230 !s90 -reportprogress|30|-work|work|C:/Users/heng_2/Desktop/fucked up 141 L/5-stages-pipeline/XM_reg.sv|
 !s101 -O0

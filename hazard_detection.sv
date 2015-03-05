@@ -2,6 +2,9 @@
 
 module hazard_detection
 (
+	 input logic is_load_op_o,
+	 input logic is_store_op_o,
+	 input fd_s fd_s_o,
 	 input dx_s dx_s_o,
 	 input xm_s xm_s_o,
 	 input mw_s mw_s_o,
@@ -37,5 +40,10 @@ begin
 	else
 		fwd_b = 2'b00;
 end
+
+assign bubble = (dx_s_o.is_load_op_c_dx || dx_s_o.is_store_op_c_dx) &&
+				((dx_s_o.instruction_dx.rd == fd_s_o.instruction_fd.rs_imm) ||
+				(dx_s_o.instruction_dx.rd == fd_s_o.instruction_fd.rd) ||
+				 is_load_op_o || is_store_op_o);
 
 endmodule
