@@ -281,7 +281,7 @@ hazard_detection hazard (.is_load_op_o(is_load_op_c),
 						 .fwd_b(fwd_b)
                   );
 
-assign PC_wen = (net_PC_write_cmd_IDLE || ~stall || ~bubble);
+assign PC_wen = (net_PC_write_cmd_IDLE || (~stall && ~bubble));
 
 // Sequential part, including PC, barrier, exception and state
 always_ff @ (posedge clk)
@@ -317,7 +317,7 @@ always_ff @ (posedge clk)
 assign stall_non_mem = (net_reg_write_cmd && mw_s_o.op_writes_rf_c_mw)
                     || (net_imem_write_cmd);
 // Stall if LD/ST still active; or in non-RUN state
-assign stall = stall_non_mem || (mem_stage_n != 0) || (state_r != RUN);
+assign stall = stall_non_mem || (mem_stage_n != 2'b00) || (state_r != RUN);
 
 // Launch LD/ST
 assign valid_to_mem_c = xm_s_o.is_mem_op_c_xm & (mem_stage_r < 2'b10);
