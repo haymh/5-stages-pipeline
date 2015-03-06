@@ -41,9 +41,13 @@ begin
 		fwd_b = 2'b00;
 end
 
+/*
 assign bubble = (dx_s_o.is_load_op_c_dx || dx_s_o.is_store_op_c_dx) &&
 				((dx_s_o.instruction_dx.rd == fd_s_o.instruction_fd.rs_imm) ||
 				(dx_s_o.instruction_dx.rd == fd_s_o.instruction_fd.rd) ||
 				 is_load_op_o || is_store_op_o);
-
+*/
+assign bubble = (xm_s_o.is_load_op_c_xm || xm_s_o.is_store_op_c_xm) &&
+				((xm_s_o.instruction_xm.rd == dx_s_o.instruction_dx.rs_imm) ||
+				(xm_s_o.instruction_xm.rd == dx_s_o.instruction_dx.rd));
 endmodule
