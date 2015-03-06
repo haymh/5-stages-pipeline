@@ -151,6 +151,7 @@ typedef struct packed{
 typedef struct packed{
 	instruction_s instruction_xm;
 	logic [imem_addr_width_gp-1:0] PC_r_xm;
+	logic [31:0] rs_val_or_zero_xm;
 	logic [31:0] alu_result_xm;
 	logic is_load_op_c_xm;
 	logic op_writes_rf_c_xm;

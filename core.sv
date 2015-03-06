@@ -118,6 +118,7 @@ DX_reg dx_reg(.clk(clk)
 assign xm_s_i = '{instruction_xm	: dx_s_o.instruction_dx,
 				  PC_r_xm			: dx_s_o.PC_r_dx,
 				  alu_result_xm		: alu_result,
+				  rs_val_or_zero_xm : rs_val_or_zero,
 				  is_load_op_c_xm	: dx_s_o.is_load_op_c_dx,
 				  op_writes_rf_c_xm : dx_s_o.op_writes_rf_c_dx,
 				  is_store_op_c_xm	: dx_s_o.is_store_op_c_dx,
@@ -157,7 +158,7 @@ MW_reg mw_reg(.clk(clk)
 assign net_packet_o = net_packet_i;
 
 // Data_mem
-assign to_mem_o = '{write_data    : rs_val_or_zero
+assign to_mem_o = '{write_data    : xm_s_o.rs_val_or_zero_xm
                    ,valid         : valid_to_mem_c
                    ,wen           : xm_s_o.is_store_op_c_xm
                    ,byte_not_word : xm_s_o.is_byte_op_c_xm
@@ -167,8 +168,9 @@ assign data_mem_addr = xm_s_o.alu_result_xm;
 //assign data_mem_addr = alu_result;
 
 // DEBUG Struct
-assign debug_o = {PC_r, instruction, state_r, barrier_mask_r, barrier_r};
+//assign debug_o = {PC_r, instruction, state_r, barrier_mask_r, barrier_r};
 
+assign debug_o = {mw_s_o.PC_r_mw, mw_s_o.instruction_mw, state_r, barrier_mask_r, barrier_r};
 // Insruction memory
 instr_mem #(.addr_width_p(imem_addr_width_p)) imem
            (.clk(clk)
@@ -241,7 +243,7 @@ always_comb
 
 // Determine next PC
 assign pc_plus1     = PC_r + 1'b1;
-assign imm_jump_add = $signed(dx_s_o.instruction_dx.rs_imm)  + $signed(PC_r);
+assign imm_jump_add = $signed(dx_s_o.instruction_dx.rs_imm)  + $signed(dx_s_o.PC_r_dx);
 
 // Next pc is based on network or the instruction
 always_comb
