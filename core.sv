@@ -33,6 +33,7 @@ logic [31:0] alu_result, rs_val_or_zero, rd_val_or_zero, rs_val, rd_val;
 
 // Reg. File address
 logic [($bits(instruction.rs_imm))-1:0] rd_addr;
+logic [($bits(instruction.rs_imm))-1:0] rd_read_addr;
 
 // Data for Reg. File signals
 logic [31:0] rf_wd;
@@ -188,7 +189,7 @@ assign instruction = (PC_wen_r) ? imem_out : instruction_r;
 reg_file #(.NUM_REG($bits(instruction.rs_imm))) rf
           (.clk(clk)
           ,.ra0_i(fd_s_o.instruction_fd.rs_imm)
-          ,.ra1_i(fd_s_o.instruction_fd.rd)
+          ,.ra1_i(rd_read_addr)
           ,.wen_i(rf_wen)
           ,.wd_i(rf_wd)  
           ,.rd0_o(rs_val)
@@ -219,6 +220,7 @@ begin
 		rd_val_or_zero = dx_s_o.instruction_dx.rd     ? dx_s_o.rd_val_dx : 32'b0;
 	  endcase
 end
+
 // ALU
 alu alu_1 (.rd_i(rd_val_or_zero)
           ,.rs_i(rs_val_or_zero)
@@ -254,7 +256,10 @@ always_comb
     else
       unique casez (dx_s_o.instruction_dx)
         `kJALR: // TODO: stall fetch stage, flush decode, write pc 
-          PC_n = alu_result[0+:imem_addr_width_p];
+		  if(fwd_a == 2'b10)
+			PC_n = xm_s_o.alu_result_xm;
+		  else
+			PC_n = alu_result[0+:imem_addr_width_p];
         `kBNEQZ,`kBEQZ,`kBLTZ,`kBGTZ: // flush fetch and decode
           if (jump_now)
             PC_n = imm_jump_add;
@@ -281,7 +286,7 @@ hazard_detection hazard (.is_load_op_o(is_load_op_c),
 						 .fwd_b(fwd_b)
                   );
 
-assign PC_wen = (net_PC_write_cmd_IDLE || (~stall && ~bubble));
+assign PC_wen = (net_PC_write_cmd_IDLE || (~stall && ~bubble) || flush);
 
 // Sequential part, including PC, barrier, exception and state
 always_ff @ (posedge clk)
@@ -392,6 +397,11 @@ assign rd_addr = (net_reg_write_cmd)
                  ? (net_packet_i.net_addr [0+:($bits(instruction.rs_imm))])
                  : ({{($bits(instruction.rs_imm)-$bits(instruction.rd)){1'b0}}
                     ,{mw_s_o.instruction_mw.rd}});
+					
+assign rd_read_addr = (net_reg_write_cmd)
+                 ? (net_packet_i.net_addr [0+:($bits(instruction.rs_imm))])
+                 : ({{($bits(instruction.rs_imm)-$bits(instruction.rd)){1'b0}}
+                    ,{fd_s_o.instruction_fd.rd}});
 
 // Instructions are shorter than 32 bits of network data
 assign net_instruction = net_packet_i.net_data [0+:($bits(instruction))];

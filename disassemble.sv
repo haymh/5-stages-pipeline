@@ -24,7 +24,7 @@
             begin
 
                // s = stall, n = net stall, ? = unknown stall
-               $write("{%8.8x} %c PC=%3.3x INSTR=%2.2x "
+               $write("{%8.8x} %c PC=%3.3x INSTR=%2.2x PC_wen=%1.1x bubble=%1.1x flush=%1.1x fwd_a=%1.1x fwd_b=%1.1x "
                       , cycle_counter_r
                       , `ROOT.PC_wen
                       ? " "
@@ -37,6 +37,11 @@
                          )
                       , `ROOT.PC_r
                       , `ROOT.instruction.opcode
+					  , `ROOT.PC_wen
+					  , `ROOT.bubble
+					  , `ROOT.flush
+					  , `ROOT.fwd_a
+					  , `ROOT.fwd_b
                       );
 
     // dissassembler
@@ -55,9 +60,63 @@
                     `C_Q4(MOV,BAR,WAIT,BEQZ);
                     `C_Q4(BNEQZ,BGTZ,BLTZ,JALR);
                     `C_Q4(LW,LBU,SW,SB);
+					`C_Q(NOP);
                     // `C_Q4(SINGLE);
                     default: $write("%-5.5s ","UNKWN");
                endcase // unique casez (`ROOT.instruction)
+			   $write("%3.3x ", `ROOT.PC_r);
+			   unique casez (`ROOT.fd_s_o.instruction_fd)
+                    `C_Q2(ADDU,SUBU);
+                    `C_Q4(SLLV,SRAV,SRLV,AND);
+                    `C_Q4(OR, NOR, SLT, SLTU);
+                    `C_Q4(MOV,BAR,WAIT,BEQZ);
+                    `C_Q4(BNEQZ,BGTZ,BLTZ,JALR);
+                    `C_Q4(LW,LBU,SW,SB);
+					`C_Q(NOP);
+                    // `C_Q4(SINGLE);
+                    default: $write("%-5.5s ","UNKWN");
+               endcase // unique casez (`ROOT.instruction)
+			   $write("%3.3x ", `ROOT.fd_s_o.PC_r_fd);
+			   $write("rs=%2.2x ", `ROOT.fd_s_o.instruction_fd.rs_imm);
+			   $write("rd=%2.2x ", `ROOT.rd_read_addr);
+			   $write("rs_val=%8.8x ", `ROOT.rs_val);
+			   $write("rd_val=%8.8x ", `ROOT.rd_val);
+			   unique casez (`ROOT.dx_s_o.instruction_dx)
+                    `C_Q2(ADDU,SUBU);
+                    `C_Q4(SLLV,SRAV,SRLV,AND);
+                    `C_Q4(OR, NOR, SLT, SLTU);
+                    `C_Q4(MOV,BAR,WAIT,BEQZ);
+                    `C_Q4(BNEQZ,BGTZ,BLTZ,JALR);
+                    `C_Q4(LW,LBU,SW,SB);
+					`C_Q(NOP);
+                    // `C_Q4(SINGLE);
+                    default: $write("%-5.5s ","UNKWN");
+               endcase // unique casez (`ROOT.instruction)
+			   $write("%3.3x ", `ROOT.dx_s_o.PC_r_dx);
+			   unique casez (`ROOT.xm_s_o.instruction_xm)
+                    `C_Q2(ADDU,SUBU);
+                    `C_Q4(SLLV,SRAV,SRLV,AND);
+                    `C_Q4(OR, NOR, SLT, SLTU);
+                    `C_Q4(MOV,BAR,WAIT,BEQZ);
+                    `C_Q4(BNEQZ,BGTZ,BLTZ,JALR);
+                    `C_Q4(LW,LBU,SW,SB);
+					`C_Q(NOP);
+                    // `C_Q4(SINGLE);
+                    default: $write("%-5.5s ","UNKWN");
+               endcase // unique casez (`ROOT.instruction)
+			   $write("%3.3x ", `ROOT.xm_s_o.PC_r_xm);
+			   unique casez (`ROOT.mw_s_o.instruction_mw)
+                    `C_Q2(ADDU,SUBU);
+                    `C_Q4(SLLV,SRAV,SRLV,AND);
+                    `C_Q4(OR, NOR, SLT, SLTU);
+                    `C_Q4(MOV,BAR,WAIT,BEQZ);
+                    `C_Q4(BNEQZ,BGTZ,BLTZ,JALR);
+                    `C_Q4(LW,LBU,SW,SB);
+					`C_Q(NOP);
+                    // `C_Q4(SINGLE);
+                    default: $write("%-5.5s ","UNKWN");
+               endcase // unique casez (`ROOT.instruction)
+			   $write("%3.3x ", `ROOT.mw_s_o.PC_r_mw);
 
                $write("%2.2x %2.2x; "
                       , `ROOT.instruction.rd

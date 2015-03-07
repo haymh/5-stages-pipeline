@@ -30,7 +30,7 @@ end
 always_comb
 begin
 	if(xm_s_o.op_writes_rf_c_xm && xm_s_o.instruction_xm.rd &&
-		(xm_s_o.instruction_xm.rd == dx_s_o.instruction_dx.rd))
+		(xm_s_o.instruction_xm.rd === dx_s_o.instruction_dx.rd))
 		fwd_b = 2'b10;
 	else if(mw_s_o.op_writes_rf_c_mw && mw_s_o.instruction_mw.rd &&
 			~(mw_s_o.op_writes_rf_c_mw && xm_s_o.instruction_xm.rd &&
