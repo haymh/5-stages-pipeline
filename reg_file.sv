@@ -11,8 +11,22 @@ module reg_file#(parameter NUM_REG = 6, BITS = 32)
 );
 
  logic [BITS - 1 : 0] rf [2**NUM_REG - 1 : 0];
- assign rd0_o = rf[ra0_i];
- assign rd1_o = rf[ra1_i];
+ logic [BITS - 1 : 0] rd0_n, rd1_n;
+ always_comb
+ begin
+	if((wa_i == ra0_i) && wen_i)
+		rd0_n = wd_i;
+	else
+		rd0_n = rf[ra0_i];
+	if((wa_i == ra1_i) && wen_i)
+		rd1_n = wd_i;
+	else
+		rd1_n = rf[ra1_i];
+ end
+ assign rd0_o = rd0_n;
+ assign rd1_o = rd1_n;
+ //assign rd0_o = rf[ra0_i];
+ //assign rd1_o = rf[ra1_i];
 
 always_ff @(posedge clk) //enable SystemVerilog to make always_ff work!
 begin

@@ -93,6 +93,7 @@ assign fd_s_i = '{instruction_fd    : instruction
 FD_reg fd_reg(.clk(clk)
 			 ,.stall(stall)
 			 ,.flush(flush)
+			 ,.bubble(bubble)
 		     ,.fd_s_i(fd_s_i)
              ,.fd_s_o(fd_s_o)
 			 );
@@ -383,7 +384,7 @@ assign barrier_o = barrier_mask_r & barrier_r;
 assign imem_wen  = net_imem_write_cmd;
 
 // Register write could be from network or the controller
-assign rf_wen    = (net_reg_write_cmd || (mw_s_o.op_writes_rf_c_mw && ~stall && ~bubble));
+assign rf_wen    = (net_reg_write_cmd || (mw_s_o.op_writes_rf_c_mw && ~stall));
 
 // Selection between network and core for instruction address
 assign imem_addr = (net_imem_write_cmd) ? net_packet_i.net_addr
