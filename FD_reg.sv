@@ -6,6 +6,7 @@ module FD_reg
 	 input logic stall,
 	 input logic flush,
 	 input logic bubble,
+	 input logic IDLE_WAIT,
 	 input fd_s fd_s_i,
 	 output fd_s fd_s_o
 );
@@ -16,7 +17,7 @@ begin
 		fd_s_o <= fd_s_o;
 	else
 	begin
-		if(flush)
+		if(flush | IDLE_WAIT)
 		begin
 			fd_s_o.instruction_fd <= `kNOP;
 			fd_s_o.PC_r_fd <= fd_s_o.PC_r_fd;

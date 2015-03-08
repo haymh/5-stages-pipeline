@@ -19,7 +19,7 @@ begin
 		(xm_s_o.instruction_xm.rd == dx_s_o.instruction_dx.rs_imm))
 		fwd_a = 2'b10;
 	else if(mw_s_o.op_writes_rf_c_mw && mw_s_o.instruction_mw.rd &&
-			~(mw_s_o.op_writes_rf_c_mw && xm_s_o.instruction_xm.rd &&
+			~(xm_s_o.op_writes_rf_c_xm && xm_s_o.instruction_xm.rd &&
 			 (xm_s_o.instruction_xm.rd === dx_s_o.instruction_dx.rs_imm)) &&
 			 (mw_s_o.instruction_mw.rd === dx_s_o.instruction_dx.rs_imm))
 		fwd_a = 2'b01;
@@ -33,7 +33,7 @@ begin
 		(xm_s_o.instruction_xm.rd === dx_s_o.instruction_dx.rd))
 		fwd_b = 2'b10;
 	else if(mw_s_o.op_writes_rf_c_mw && mw_s_o.instruction_mw.rd &&
-			~(mw_s_o.op_writes_rf_c_mw && xm_s_o.instruction_xm.rd &&
+			~(xm_s_o.op_writes_rf_c_xm && xm_s_o.instruction_xm.rd &&
 			 (xm_s_o.instruction_xm.rd === dx_s_o.instruction_dx.rd)) &&
 			 (mw_s_o.instruction_mw.rd === dx_s_o.instruction_dx.rd))
 		fwd_b = 2'b01;
@@ -47,7 +47,25 @@ assign bubble = (dx_s_o.is_load_op_c_dx || dx_s_o.is_store_op_c_dx) &&
 				(dx_s_o.instruction_dx.rd == fd_s_o.instruction_fd.rd) ||
 				 is_load_op_o || is_store_op_o);
 */
-assign bubble = (xm_s_o.is_load_op_c_xm || xm_s_o.is_store_op_c_xm) &&
+always_comb
+begin
+	bubble = 1'b0;
+	if(xm_s_o.is_load_op_c_xm &&
+				~(xm_s_o.op_writes_rf_c_xm && xm_s_o.instruction_xm.rd &&
+				(xm_s_o.instruction_xm.rd === dx_s_o.instruction_dx.rd)) &&
+				~(xm_s_o.op_writes_rf_c_xm && xm_s_o.instruction_xm.rd &&
+				(xm_s_o.instruction_xm.rd === dx_s_o.instruction_dx.rs_imm)) &&
+				((xm_s_o.instruction_xm.rd == dx_s_o.instruction_dx.rs_imm) ||
+				(xm_s_o.instruction_xm.rd == dx_s_o.instruction_dx.rd)))
+		bubble = 1'b1;
+end
+/*
+assign bubble = xm_s_o.is_load_op_c_xm &&
+				~(xm_s_o.op_writes_rf_c_xm && xm_s_o.instruction_xm.rd &&
+				(xm_s_o.instruction_xm.rd === dx_s_o.instruction_dx.rd)) &&
+				~(xm_s_o.op_writes_rf_c_xm && xm_s_o.instruction_xm.rd &&
+				(xm_s_o.instruction_xm.rd === dx_s_o.instruction_dx.rs_imm)) &&
 				((xm_s_o.instruction_xm.rd == dx_s_o.instruction_dx.rs_imm) ||
 				(xm_s_o.instruction_xm.rd == dx_s_o.instruction_dx.rd));
+*/
 endmodule

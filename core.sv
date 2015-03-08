@@ -76,6 +76,8 @@ logic [mask_length_gp-1:0] barrier_r,      barrier_n,
 						   
 logic bubble;
 logic flush;
+logic IDLE_WAIT;
+logic [1:0] wait_count;
 logic [1:0] fwd_a,fwd_b;
 // stages input & output
 fd_s fd_s_i, fd_s_o;
@@ -94,10 +96,33 @@ FD_reg fd_reg(.clk(clk)
 			 ,.stall(stall)
 			 ,.flush(flush)
 			 ,.bubble(bubble)
+			 ,.IDLE_WAIT(IDLE_WAIT)
 		     ,.fd_s_i(fd_s_i)
              ,.fd_s_o(fd_s_o)
 			 );
 			 
+
+always_comb
+begin
+	IDLE_WAIT = 1'b0;
+	if(fd_s_o.instruction_fd==?`kWAIT || wait_count > 2'b00)
+		IDLE_WAIT = 1'b1;
+	else
+		IDLE_WAIT = 1'b0;
+end
+
+always_ff @(posedge clk)
+begin
+	if(fd_s_o.instruction_fd==?`kWAIT)
+		wait_count <= 2'b11;
+	else if(wait_count > 2'b00)
+		wait_count <= wait_count - 2'b01;
+	else
+		wait_count <= 2'b00;
+end
+
+//assign IDLE_WAIT = 1'b0;
+ 
 assign dx_s_i = '{instruction_dx	: fd_s_o.instruction_fd,
 				  PC_r_dx			: fd_s_o.PC_r_fd,
 				  rs_val_dx			: rs_val,
@@ -287,7 +312,7 @@ hazard_detection hazard (.is_load_op_o(is_load_op_c),
 						 .fwd_b(fwd_b)
                   );
 
-assign PC_wen = (net_PC_write_cmd_IDLE || (~stall && ~bubble) || flush);
+assign PC_wen = (net_PC_write_cmd_IDLE || (~stall && ~bubble && ~IDLE_WAIT) || flush);
 
 // Sequential part, including PC, barrier, exception and state
 always_ff @ (posedge clk)
@@ -358,6 +383,7 @@ cl_decode decode (.instruction_i(fd_s_o.instruction_fd)
                   );
 
 // State machine
+/*
 cl_state_machine state_machine (.instruction_i(mw_s_o.instruction_mw)
                                ,.state_i(state_r)
                                ,.exception_i(exception_o)
@@ -365,7 +391,14 @@ cl_state_machine state_machine (.instruction_i(mw_s_o.instruction_mw)
                                ,.stall_i(stall)
                                ,.state_o(state_n)
                                );
-
+*/
+cl_state_machine state_machine (.instruction_i(mw_s_o.instruction_mw)
+                               ,.state_i(state_r)
+                               ,.exception_i(exception_o)
+                               ,.net_PC_write_cmd_IDLE_i(net_PC_write_cmd_IDLE)
+                               ,.stall_i(stall)
+                               ,.state_o(state_n)
+                               );
 //---- Datapath with network ----//
 // Detect a valid packet for this core
 assign net_ID_match = (net_packet_i.ID==net_ID_p);

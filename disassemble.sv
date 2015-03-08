@@ -24,7 +24,7 @@
             begin
 
                // s = stall, n = net stall, ? = unknown stall
-               $write("{%8.8x} %c PC=%3.3x INSTR=%2.2x PC_wen=%1.1x bubble=%1.1x flush=%1.1x fwd_a=%1.1x fwd_b=%1.1x "
+               $write("{%8.8x} %c PC=%3.3x INSTR=%2.2x PC_wen=%1.1x bubble=%1.1x flush=%1.1x fwd_a=%1.1x fwd_b=%1.1x IDLE_WAIT=%1.1x "
                       , cycle_counter_r
                       , `ROOT.PC_wen
                       ? " "
@@ -42,6 +42,7 @@
 					  , `ROOT.flush
 					  , `ROOT.fwd_a
 					  , `ROOT.fwd_b
+					  , `ROOT.IDLE_WAIT
                       );
 
     // dissassembler
@@ -119,8 +120,8 @@
 			   $write("%3.3x ", `ROOT.mw_s_o.PC_r_mw);
 
                $write("%2.2x %2.2x; "
-                      , `ROOT.instruction.rd
-                      , `ROOT.instruction.rs_imm
+                      , `ROOT.mw_s_o.instruction_mw.rd
+                      , `ROOT.mw_s_o.instruction_mw.rs_imm
                       );
 
                if (`ROOT.rf_wen)
