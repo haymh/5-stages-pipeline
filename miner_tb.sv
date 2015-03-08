@@ -7,7 +7,7 @@
 // Comment out this line to remove disassembly support
 // You will need to do this when you run a gate-level i.e. timing simulation in ModelSim
 
-`define DISASSEMBLE
+//`define DISASSEMBLE
 
 `define half_period 1.5
 //`timescale 100 ns / 1 ns

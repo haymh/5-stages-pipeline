@@ -1,5 +1,5 @@
 Flow report for core
-Thu Mar 05 02:22:02 2015
+Sun Mar 08 07:26:13 2015
 Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
 
 
@@ -41,20 +41,20 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Thu Mar 05 02:22:02 2015      ;
+; Flow Status                        ; Successful - Sun Mar 08 07:26:13 2015      ;
 ; Quartus II 64-Bit Version          ; 14.0.0 Build 200 06/17/2014 SJ Web Edition ;
 ; Revision Name                      ; core                                       ;
 ; Top-level Entity Name              ; core                                       ;
 ; Family                             ; Cyclone IV E                               ;
 ; Device                             ; EP4CE40F29C6                               ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 1,719 / 39,600 ( 4 % )                     ;
-;     Total combinational functions  ; 1,626 / 39,600 ( 4 % )                     ;
-;     Dedicated logic registers      ; 370 / 39,600 ( < 1 % )                     ;
-; Total registers                    ; 370                                        ;
+; Total logic elements               ; 4,219 / 39,600 ( 11 % )                    ;
+;     Total combinational functions  ; 3,106 / 39,600 ( 8 % )                     ;
+;     Dedicated logic registers      ; 2,412 / 39,600 ( 6 % )                     ;
+; Total registers                    ; 2412                                       ;
 ; Total pins                         ; 272 / 533 ( 51 % )                         ;
 ; Total virtual pins                 ; 0                                          ;
-; Total memory bits                  ; 20,480 / 1,161,216 ( 2 % )                 ;
+; Total memory bits                  ; 18,432 / 1,161,216 ( 2 % )                 ;
 ; Embedded Multiplier 9-bit elements ; 0 / 232 ( 0 % )                            ;
 ; Total PLLs                         ; 0 / 4 ( 0 % )                              ;
 +------------------------------------+--------------------------------------------+
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/05/2015 02:20:43 ;
+; Start date & time ; 03/08/2015 07:23:57 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; core                ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ agreement for further details.
 +-------------------------------------+---------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                           ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 105564169643990.142555084304516 ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 105564169643990.142582463702492 ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Systemverilog Hdl               ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (SystemVerilog) ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                              ; --            ; --          ; --             ;
@@ -94,12 +94,12 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:11     ; 1.0                     ; 569 MB              ; 00:00:10                           ;
-; Fitter                    ; 00:00:46     ; 1.0                     ; 847 MB              ; 00:00:45                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 512 MB              ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:06     ; 1.0                     ; 586 MB              ; 00:00:05                           ;
-; EDA Netlist Writer        ; 00:00:04     ; 1.0                     ; 474 MB              ; 00:00:03                           ;
-; Total                     ; 00:01:09     ; --                      ; --                  ; 00:01:05                           ;
+; Analysis & Synthesis      ; 00:00:21     ; 1.0                     ; 637 MB              ; 00:00:20                           ;
+; Fitter                    ; 00:01:23     ; 1.0                     ; 895 MB              ; 00:01:21                           ;
+; Assembler                 ; 00:00:03     ; 1.0                     ; 518 MB              ; 00:00:03                           ;
+; TimeQuest Timing Analyzer ; 00:00:08     ; 1.0                     ; 616 MB              ; 00:00:09                           ;
+; EDA Netlist Writer        ; 00:00:08     ; 1.0                     ; 496 MB              ; 00:00:06                           ;
+; Total                     ; 00:02:03     ; --                      ; --                  ; 00:01:59                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

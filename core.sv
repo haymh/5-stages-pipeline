@@ -78,7 +78,8 @@ logic bubble;
 logic flush;
 logic IDLE_WAIT;
 logic [1:0] wait_count;
-logic [1:0] fwd_a,fwd_b;
+logic [1:0] fwd_a,fwd_b,fwd_c;
+logic [31:0] mem_write_data;
 // stages input & output
 fd_s fd_s_i, fd_s_o;
 dx_s dx_s_i, dx_s_o;
@@ -162,7 +163,9 @@ XM_reg xm_reg(.clk(clk)
 assign mw_s_i = '{instruction_mw	: xm_s_o.instruction_xm,
 				  PC_r_mw			: xm_s_o.PC_r_xm,
 				  rf_wd_mw			: rf_wd_mw_n,	// either alu_result or memory out data
-				  op_writes_rf_c_mw : xm_s_o.op_writes_rf_c_xm
+				  op_writes_rf_c_mw : xm_s_o.op_writes_rf_c_xm,
+				  alu_result_mw		: xm_s_o.alu_result_xm,
+				  is_load_op_c_mw	: xm_s_o.is_load_op_c_xm
 				 };
 
 always_comb
@@ -185,14 +188,13 @@ MW_reg mw_reg(.clk(clk)
 assign net_packet_o = net_packet_i;
 
 // Data_mem
-assign to_mem_o = '{write_data    : xm_s_o.rs_val_or_zero_xm
+assign to_mem_o = '{write_data    : mem_write_data//xm_s_o.rs_val_or_zero_xm
                    ,valid         : valid_to_mem_c
                    ,wen           : xm_s_o.is_store_op_c_xm
                    ,byte_not_word : xm_s_o.is_byte_op_c_xm
                    ,yumi          : yumi_to_mem_c
                    };
-assign data_mem_addr = xm_s_o.alu_result_xm;
-//assign data_mem_addr = alu_result;
+//assign data_mem_addr = xm_s_o.alu_result_xm;
 
 // DEBUG Struct
 //assign debug_o = {PC_r, instruction, state_r, barrier_mask_r, barrier_r};
@@ -245,6 +247,26 @@ begin
 	  default:
 		rd_val_or_zero = dx_s_o.instruction_dx.rd     ? dx_s_o.rd_val_dx : 32'b0;
 	  endcase
+end
+always_comb
+begin
+	unique casez(fwd_c)
+	  2'b10:
+	  begin
+		data_mem_addr = mw_s_o.rf_wd_mw;
+		mem_write_data = xm_s_o.rs_val_or_zero_xm;
+	  end
+	  2'b01:
+	  begin
+		data_mem_addr = xm_s_o.alu_result_xm;
+		mem_write_data = mw_s_o.rf_wd_mw;
+	  end
+	  default:
+	  begin
+		data_mem_addr = xm_s_o.alu_result_xm;
+		mem_write_data = xm_s_o.rs_val_or_zero_xm;
+	  end
+	endcase
 end
 
 // ALU
@@ -309,7 +331,8 @@ hazard_detection hazard (.is_load_op_o(is_load_op_c),
 						 .mw_s_o(mw_s_o),
 						 .bubble(bubble),
 						 .fwd_a(fwd_a),
-						 .fwd_b(fwd_b)
+						 .fwd_b(fwd_b),
+						 .fwd_c(fwd_c)
                   );
 
 assign PC_wen = (net_PC_write_cmd_IDLE || (~stall && ~bubble && ~IDLE_WAIT) || flush);
@@ -453,8 +476,8 @@ always_comb
 // or by an an BAR instruction that is committing
 assign barrier_n = net_PC_write_cmd_IDLE
                    ? net_packet_i.net_data[0+:mask_length_gp]
-                   : ((xm_s_o.instruction_xm==?`kBAR) & ~stall)
-                     ? alu_result [0+:mask_length_gp]
+                   : ((mw_s_o.instruction_mw==?`kBAR) & ~stall)
+                     ? mw_s_o.alu_result_mw [0+:mask_length_gp]
                      : barrier_r;
 
 // exception_n signal, which indicates an exception

@@ -164,6 +164,8 @@ typedef struct packed{
 	instruction_s instruction_mw;
 	logic [imem_addr_width_gp-1:0] PC_r_mw;
 	logic [31:0] rf_wd_mw;
+	logic [31:0] alu_result_mw;
+	logic is_load_op_c_mw;
 	logic op_writes_rf_c_mw;
 } mw_s;
 

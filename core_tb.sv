@@ -10,9 +10,9 @@
 
 // TODO: Edit the file names below to match your Assembler output files.
 // read from assembled files and store in buffers
-   `define hex_i_file "./XROR_test_i.hex"
-   `define hex_r_file "./XROR_test_r.hex"
-   `define hex_d_file "./XROR_test_d.hex"
+   `define hex_i_file "./forwarding_i.hex"
+   `define hex_r_file "./forwarding_r.hex"
+   `define hex_d_file "./forwarding_d.hex"
 
 module core_tb();
 

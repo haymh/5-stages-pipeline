@@ -71,277 +71,277 @@ Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage 
 -------------------------------------------------------------------------------------------------------------
 VCCIO8                       : A2        : power  :                   : 2.5V    : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A3        :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : A4        :        :                   :         : 8         :                
+net_packet_o.net_addr[11]    : A4        : output : 2.5 V             :         : 8         : N              
 VCCIO8                       : A5        : power  :                   : 2.5V    : 8         :                
-barrier_o[1]                 : A6        : output : 2.5 V             :         : 8         : N              
-net_packet_o.net_data[11]    : A7        : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : A6        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : A7        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A8        :        :                   :         : 8         :                
 VCCIO8                       : A9        : power  :                   : 2.5V    : 8         :                
-net_packet_o.net_data[8]     : A10       : output : 2.5 V             :         : 8         : N              
-to_mem_o.write_data[23]      : A11       : output : 2.5 V             :         : 8         : N              
-to_mem_o.write_data[15]      : A12       : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : A10       :        :                   :         : 8         :                
+net_packet_i.net_data[31]    : A11       : input  : 2.5 V             :         : 8         : N              
+data_mem_addr[9]             : A12       : output : 2.5 V             :         : 8         : N              
 VCCIO8                       : A13       : power  :                   : 2.5V    : 8         :                
 GND+                         : A14       :        :                   :         : 8         :                
 net_packet_i.ID[6]           : A15       : input  : 2.5 V             :         : 7         : N              
 VCCIO7                       : A16       : power  :                   : 2.5V    : 7         :                
-debug_o.instruction_i_f[9]   : A17       : output : 2.5 V             :         : 7         : N              
-debug_o.instruction_i_f[2]   : A18       : output : 2.5 V             :         : 7         : N              
-debug_o.instruction_i_f[1]   : A19       : output : 2.5 V             :         : 7         : N              
+from_mem_i.read_data[30]     : A17       : input  : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : A18       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : A19       :        :                   :         : 7         :                
 VCCIO7                       : A20       : power  :                   : 2.5V    : 7         :                
-net_packet_i.net_data[25]    : A21       : input  : 2.5 V             :         : 7         : N              
-debug_o.instruction_i_f[14]  : A22       : output : 2.5 V             :         : 7         : N              
-net_packet_o.net_op[0]       : A23       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : A21       :        :                   :         : 7         :                
+net_packet_o.reserved[4]     : A22       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : A23       :        :                   :         : 7         :                
 VCCIO7                       : A24       : power  :                   : 2.5V    : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A25       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A26       :        :                   :         : 7         :                
 VCCIO7                       : A27       : power  :                   : 2.5V    : 7         :                
 VCCIO2                       : AA1       : power  :                   : 2.5V    : 2         :                
 GND                          : AA2       : gnd    :                   :         :           :                
-net_packet_o.net_addr[11]    : AA3       : output : 2.5 V             :         : 2         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA4       :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA5       :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA6       :        :                   :         : 2         :                
+from_mem_i.read_data[15]     : AA3       : input  : 2.5 V             :         : 2         : N              
+data_mem_addr[8]             : AA4       : output : 2.5 V             :         : 2         : N              
+debug_o.instruction_i_f[15]  : AA5       : output : 2.5 V             :         : 2         : N              
+net_packet_i.net_data[19]    : AA6       : input  : 2.5 V             :         : 2         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA7       :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA8       :        :                   :         : 2         :                
+net_packet_o.net_data[19]    : AA8       : output : 2.5 V             :         : 2         : N              
 GNDA1                        : AA9       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA10      :        :                   :         : 3         :                
+from_mem_i.read_data[23]     : AA10      : input  : 2.5 V             :         : 3         : N              
 VCCIO3                       : AA11      : power  :                   : 2.5V    : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA12      :        :                   :         : 3         :                
-net_packet_i.net_addr[10]    : AA13      : input  : 2.5 V             :         : 3         : N              
-net_packet_i.net_data[0]     : AA14      : input  : 2.5 V             :         : 3         : N              
-net_packet_o.net_data[1]     : AA15      : output : 2.5 V             :         : 4         : N              
-net_packet_i.net_addr[7]     : AA16      : input  : 2.5 V             :         : 4         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA17      :        :                   :         : 4         :                
+data_mem_addr[5]             : AA12      : output : 2.5 V             :         : 3         : N              
+net_packet_o.net_addr[0]     : AA13      : output : 2.5 V             :         : 3         : N              
+data_mem_addr[20]            : AA14      : output : 2.5 V             :         : 3         : N              
+net_packet_o.net_addr[1]     : AA15      : output : 2.5 V             :         : 4         : N              
+net_packet_i.net_data[6]     : AA16      : input  : 2.5 V             :         : 4         : N              
+net_packet_i.net_data[13]    : AA17      : input  : 2.5 V             :         : 4         : N              
 VCCIO4                       : AA18      : power  :                   : 2.5V    : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA19      :        :                   :         : 4         :                
+net_packet_o.net_data[13]    : AA19      : output : 2.5 V             :         : 4         : N              
 GNDA4                        : AA20      : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA21      :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA22      :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA23      :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA24      :        :                   :         : 5         :                
+net_packet_i.net_data[10]    : AA21      : input  : 2.5 V             :         : 5         : N              
+net_packet_o.net_addr[10]    : AA22      : output : 2.5 V             :         : 5         : N              
+net_packet_o.ID[8]           : AA23      : output : 2.5 V             :         : 5         : N              
+net_packet_i.net_data[0]     : AA24      : input  : 2.5 V             :         : 5         : N              
 net_packet_i.net_op[2]       : AA25      : input  : 2.5 V             :         : 5         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA26      :        :                   :         : 5         :                
+data_mem_addr[28]            : AA26      : output : 2.5 V             :         : 5         : N              
 GND                          : AA27      : gnd    :                   :         :           :                
 VCCIO5                       : AA28      : power  :                   : 2.5V    : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB1       :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB2       :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB3       :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB4       :        :                   :         : 2         :                
-net_packet_i.net_addr[11]    : AB5       : input  : 2.5 V             :         : 2         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB6       :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB7       :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB8       :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB9       :        :                   :         : 3         :                
+net_packet_i.net_data[18]    : AB3       : input  : 2.5 V             :         : 2         : N              
+to_mem_o.write_data[28]      : AB4       : output : 2.5 V             :         : 2         : N              
+data_mem_addr[25]            : AB5       : output : 2.5 V             :         : 2         : N              
+data_mem_addr[7]             : AB6       : output : 2.5 V             :         : 2         : N              
+to_mem_o.write_data[23]      : AB7       : output : 2.5 V             :         : 2         : N              
+net_packet_i.net_data[24]    : AB8       : input  : 2.5 V             :         : 2         : N              
+data_mem_addr[21]            : AB9       : output : 2.5 V             :         : 3         : N              
 VCCIO3                       : AB10      : power  :                   : 2.5V    : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB11      :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB12      :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB13      :        :                   :         : 3         :                
-net_packet_o.net_data[0]     : AB14      : output : 2.5 V             :         : 3         : N              
-net_packet_o.net_data[13]    : AB15      : output : 2.5 V             :         : 4         : N              
-to_mem_o.write_data[5]       : AB16      : output : 2.5 V             :         : 4         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB17      :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB18      :        :                   :         : 4         :                
-net_packet_i.net_addr[0]     : AB19      : input  : 2.5 V             :         : 4         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB20      :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB21      :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB22      :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB23      :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB24      :        :                   :         : 5         :                
-net_packet_o.net_addr[9]     : AB25      : output : 2.5 V             :         : 5         : N              
-net_packet_i.net_addr[13]    : AB26      : input  : 2.5 V             :         : 5         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB27      :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB28      :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AC1       :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AC2       :        :                   :         : 2         :                
+net_packet_i.net_data[25]    : AB11      : input  : 2.5 V             :         : 3         : N              
+net_packet_i.net_data[27]    : AB12      : input  : 2.5 V             :         : 3         : N              
+from_mem_i.read_data[7]      : AB13      : input  : 2.5 V             :         : 3         : N              
+data_mem_addr[18]            : AB14      : output : 2.5 V             :         : 3         : N              
+from_mem_i.read_data[29]     : AB15      : input  : 2.5 V             :         : 4         : N              
+exception_o                  : AB16      : output : 2.5 V             :         : 4         : N              
+net_packet_o.reserved[5]     : AB17      : output : 2.5 V             :         : 4         : N              
+net_packet_i.net_data[30]    : AB18      : input  : 2.5 V             :         : 4         : N              
+data_mem_addr[31]            : AB19      : output : 2.5 V             :         : 4         : N              
+net_packet_o.net_addr[6]     : AB20      : output : 2.5 V             :         : 4         : N              
+debug_o.barrier_mask_r_f[2]  : AB21      : output : 2.5 V             :         : 4         : N              
+net_packet_o.net_data[10]    : AB22      : output : 2.5 V             :         : 5         : N              
+net_packet_i.net_addr[10]    : AB23      : input  : 2.5 V             :         : 5         : N              
+net_packet_i.net_addr[8]     : AB24      : input  : 2.5 V             :         : 5         : N              
+net_packet_o.net_op[2]       : AB25      : output : 2.5 V             :         : 5         : N              
+debug_o.instruction_i_f[9]   : AB26      : output : 2.5 V             :         : 5         : N              
+net_packet_i.net_data[9]     : AB27      : input  : 2.5 V             :         : 5         : N              
+to_mem_o.write_data[19]      : AB28      : output : 2.5 V             :         : 5         : N              
+debug_o.PC_r_f[0]            : AC1       : output : 2.5 V             :         : 2         : N              
+data_mem_addr[6]             : AC2       : output : 2.5 V             :         : 2         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AC3       :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AC4       :        :                   :         : 2         :                
+net_packet_o.net_data[28]    : AC4       : output : 2.5 V             :         : 2         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AC5       :        :                   :         : 2         :                
 GND                          : AC6       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AC7       :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AC8       :        :                   :         : 3         :                
+from_mem_i.read_data[20]     : AC7       : input  : 2.5 V             :         : 2         : N              
+debug_o.instruction_i_f[14]  : AC8       : output : 2.5 V             :         : 3         : N              
 GND                          : AC9       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AC10      :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AC11      :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AC12      :        :                   :         : 3         :                
+net_packet_o.net_data[21]    : AC10      : output : 2.5 V             :         : 3         : N              
+net_packet_o.reserved[1]     : AC11      : output : 2.5 V             :         : 3         : N              
+data_mem_addr[16]            : AC12      : output : 2.5 V             :         : 3         : N              
 GND                          : AC13      : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AC14      :        :                   :         : 3         :                
-net_packet_i.net_data[13]    : AC15      : input  : 2.5 V             :         : 4         : N              
+data_mem_addr[4]             : AC14      : output : 2.5 V             :         : 3         : N              
+from_mem_i.read_data[4]      : AC15      : input  : 2.5 V             :         : 4         : N              
 GND                          : AC16      : gnd    :                   :         :           :                
-from_mem_i.read_data[30]     : AC17      : input  : 2.5 V             :         : 4         : N              
-net_packet_i.net_data[18]    : AC18      : input  : 2.5 V             :         : 4         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AC19      :        :                   :         : 4         :                
+from_mem_i.read_data[16]     : AC17      : input  : 2.5 V             :         : 4         : N              
+net_packet_o.net_data[7]     : AC18      : output : 2.5 V             :         : 4         : N              
+debug_o.PC_r_f[9]            : AC19      : output : 2.5 V             :         : 4         : N              
 GND                          : AC20      : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AC21      :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AC22      :        :                   :         : 4         :                
+net_packet_o.net_addr[8]     : AC21      : output : 2.5 V             :         : 4         : N              
+net_packet_o.net_data[8]     : AC22      : output : 2.5 V             :         : 4         : N              
 GND                          : AC23      : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AC24      :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AC25      :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AC26      :        :                   :         : 5         :                
-net_packet_o.net_data[26]    : AC27      : output : 2.5 V             :         : 5         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AC28      :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AD1       :        :                   :         : 2         :                
+net_packet_i.net_addr[4]     : AC25      : input  : 2.5 V             :         : 5         : N              
+debug_o.instruction_i_f[3]   : AC26      : output : 2.5 V             :         : 5         : N              
+net_packet_i.net_data[3]     : AC27      : input  : 2.5 V             :         : 5         : N              
+debug_o.barrier_r_f[2]       : AC28      : output : 2.5 V             :         : 5         : N              
+net_packet_o.net_data[18]    : AD1       : output : 2.5 V             :         : 2         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD2       :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD3       :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD4       :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD5       :        :                   :         : 2         :                
 VCCIO3                       : AD6       : power  :                   : 2.5V    : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AD7       :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AD8       :        :                   :         : 3         :                
+to_mem_o.write_data[11]      : AD7       : output : 2.5 V             :         : 3         : N              
+to_mem_o.write_data[13]      : AD8       : output : 2.5 V             :         : 3         : N              
 VCCIO3                       : AD9       : power  :                   : 2.5V    : 3         :                
-net_packet_o.net_addr[10]    : AD10      : output : 2.5 V             :         : 3         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AD11      :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AD12      :        :                   :         : 3         :                
+net_packet_i.net_addr[0]     : AD10      : input  : 2.5 V             :         : 3         : N              
+net_packet_o.net_data[27]    : AD11      : output : 2.5 V             :         : 3         : N              
+net_packet_i.net_data[20]    : AD12      : input  : 2.5 V             :         : 3         : N              
 VCCIO3                       : AD13      : power  :                   : 2.5V    : 3         :                
-net_packet_o.net_data[2]     : AD14      : output : 2.5 V             :         : 3         : N              
-data_mem_addr[21]            : AD15      : output : 2.5 V             :         : 4         : N              
+data_mem_addr[29]            : AD14      : output : 2.5 V             :         : 3         : N              
+net_packet_o.net_addr[9]     : AD15      : output : 2.5 V             :         : 4         : N              
 VCCIO4                       : AD16      : power  :                   : 2.5V    : 4         :                
-data_mem_addr[19]            : AD17      : output : 2.5 V             :         : 4         : N              
-net_packet_o.net_data[21]    : AD18      : output : 2.5 V             :         : 4         : N              
-net_packet_o.net_addr[0]     : AD19      : output : 2.5 V             :         : 4         : N              
+debug_o.instruction_i_f[1]   : AD17      : output : 2.5 V             :         : 4         : N              
+net_packet_i.net_addr[5]     : AD18      : input  : 2.5 V             :         : 4         : N              
+net_packet_i.net_data[7]     : AD19      : input  : 2.5 V             :         : 4         : N              
 VCCIO4                       : AD20      : power  :                   : 2.5V    : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AD21      :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AD22      :        :                   :         : 4         :                
+net_packet_i.net_data[4]     : AD21      : input  : 2.5 V             :         : 4         : N              
+net_packet_i.net_data[8]     : AD22      : input  : 2.5 V             :         : 4         : N              
 VCCIO4                       : AD23      : power  :                   : 2.5V    : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AD24      :        :                   :         : 5         :                
+to_mem_o.write_data[16]      : AD24      : output : 2.5 V             :         : 5         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD25      :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AD26      :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AD27      :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AD28      :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AE1       :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AE2       :        :                   :         : 2         :                
+debug_o.barrier_r_f[0]       : AD26      : output : 2.5 V             :         : 5         : N              
+net_packet_i.net_data[1]     : AD27      : input  : 2.5 V             :         : 5         : N              
+net_packet_o.net_data[1]     : AD28      : output : 2.5 V             :         : 5         : N              
+net_packet_i.net_data[28]    : AE1       : input  : 2.5 V             :         : 2         : N              
+data_mem_addr[15]            : AE2       : output : 2.5 V             :         : 2         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE3       :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE4       :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AE5       :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AE6       :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AE7       :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AE8       :        :                   :         : 3         :                
-net_packet_i.net_data[2]     : AE9       : input  : 2.5 V             :         : 3         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AE10      :        :                   :         : 3         :                
-net_packet_o.net_addr[7]     : AE11      : output : 2.5 V             :         : 3         : N              
-to_mem_o.write_data[25]      : AE12      : output : 2.5 V             :         : 3         : N              
-to_mem_o.write_data[1]       : AE13      : output : 2.5 V             :         : 3         : N              
-net_packet_o.ID[2]           : AE14      : output : 2.5 V             :         : 3         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AE15      :        :                   :         : 4         :                
-net_packet_i.reserved[0]     : AE16      : input  : 2.5 V             :         : 4         : N              
-net_packet_o.reserved[0]     : AE17      : output : 2.5 V             :         : 4         : N              
-net_packet_i.net_data[31]    : AE18      : input  : 2.5 V             :         : 4         : N              
-to_mem_o.valid               : AE19      : output : 2.5 V             :         : 4         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AE20      :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AE21      :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AE22      :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AE23      :        :                   :         : 4         :                
-net_packet_i.net_addr[12]    : AE24      : input  : 2.5 V             :         : 4         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AE25      :        :                   :         : 4         :                
+net_packet_i.net_data[17]    : AE5       : input  : 2.5 V             :         : 3         : N              
+net_packet_i.reserved[1]     : AE6       : input  : 2.5 V             :         : 3         : N              
+net_packet_o.net_data[17]    : AE7       : output : 2.5 V             :         : 3         : N              
+net_packet_o.net_data[23]    : AE8       : output : 2.5 V             :         : 3         : N              
+from_mem_i.read_data[25]     : AE9       : input  : 2.5 V             :         : 3         : N              
+from_mem_i.read_data[12]     : AE10      : input  : 2.5 V             :         : 3         : N              
+net_packet_i.net_data[14]    : AE11      : input  : 2.5 V             :         : 3         : N              
+net_packet_i.net_addr[1]     : AE12      : input  : 2.5 V             :         : 3         : N              
+debug_o.instruction_i_f[11]  : AE13      : output : 2.5 V             :         : 3         : N              
+data_mem_addr[3]             : AE14      : output : 2.5 V             :         : 3         : N              
+net_packet_i.net_addr[9]     : AE15      : input  : 2.5 V             :         : 4         : N              
+data_mem_addr[10]            : AE16      : output : 2.5 V             :         : 4         : N              
+from_mem_i.read_data[10]     : AE17      : input  : 2.5 V             :         : 4         : N              
+debug_o.instruction_i_f[7]   : AE18      : output : 2.5 V             :         : 4         : N              
+net_packet_i.net_addr[2]     : AE19      : input  : 2.5 V             :         : 4         : N              
+data_mem_addr[0]             : AE20      : output : 2.5 V             :         : 4         : N              
+net_packet_o.net_addr[2]     : AE21      : output : 2.5 V             :         : 4         : N              
+net_packet_o.net_op[1]       : AE22      : output : 2.5 V             :         : 4         : N              
+net_packet_i.net_data[15]    : AE23      : input  : 2.5 V             :         : 4         : N              
+from_mem_i.read_data[3]      : AE24      : input  : 2.5 V             :         : 4         : N              
+net_packet_o.net_addr[5]     : AE25      : output : 2.5 V             :         : 4         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE26      :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE27      :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AE28      :        :                   :         : 5         :                
+net_packet_o.net_data[2]     : AE28      : output : 2.5 V             :         : 5         : N              
 GND                          : AF1       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF2       :        :                   :         : 2         :                
+data_mem_addr[17]            : AF2       : output : 2.5 V             :         : 2         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF3       :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF4       :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF5       :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF6       :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF7       :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF8       :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF9       :        :                   :         : 3         :                
-net_packet_i.reserved[4]     : AF10      : input  : 2.5 V             :         : 3         : N              
-net_packet_o.reserved[4]     : AF11      : output : 2.5 V             :         : 3         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF12      :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF13      :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF14      :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF15      :        :                   :         : 4         :                
-data_mem_addr[23]            : AF16      : output : 2.5 V             :         : 4         : N              
-from_mem_i.read_data[1]      : AF17      : input  : 2.5 V             :         : 4         : N              
-from_mem_i.read_data[20]     : AF18      : input  : 2.5 V             :         : 4         : N              
-net_packet_o.reserved[5]     : AF19      : output : 2.5 V             :         : 4         : N              
-net_packet_o.net_data[18]    : AF20      : output : 2.5 V             :         : 4         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF21      :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF22      :        :                   :         : 4         :                
+debug_o.PC_r_f[2]            : AF4       : output : 2.5 V             :         : 3         : N              
+data_mem_addr[11]            : AF5       : output : 2.5 V             :         : 3         : N              
+from_mem_i.read_data[1]      : AF6       : input  : 2.5 V             :         : 3         : N              
+data_mem_addr[12]            : AF7       : output : 2.5 V             :         : 3         : N              
+from_mem_i.read_data[17]     : AF8       : input  : 2.5 V             :         : 3         : N              
+data_mem_addr[26]            : AF9       : output : 2.5 V             :         : 3         : N              
+from_mem_i.read_data[26]     : AF10      : input  : 2.5 V             :         : 3         : N              
+data_mem_addr[27]            : AF11      : output : 2.5 V             :         : 3         : N              
+data_mem_addr[24]            : AF12      : output : 2.5 V             :         : 3         : N              
+data_mem_addr[23]            : AF13      : output : 2.5 V             :         : 3         : N              
+to_mem_o.write_data[4]       : AF14      : output : 2.5 V             :         : 3         : N              
+net_packet_o.net_addr[7]     : AF15      : output : 2.5 V             :         : 4         : N              
+to_mem_o.write_data[22]      : AF16      : output : 2.5 V             :         : 4         : N              
+debug_o.instruction_i_f[2]   : AF17      : output : 2.5 V             :         : 4         : N              
+debug_o.state_r_f[1]         : AF18      : output : 2.5 V             :         : 4         : N              
+net_packet_o.net_data[16]    : AF19      : output : 2.5 V             :         : 4         : N              
+from_mem_i.yumi              : AF20      : input  : 2.5 V             :         : 4         : N              
+net_packet_i.reserved[5]     : AF21      : input  : 2.5 V             :         : 4         : N              
+net_packet_o.net_data[15]    : AF22      : output : 2.5 V             :         : 4         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF23      :        :                   :         : 4         :                
-net_packet_i.reserved[5]     : AF24      : input  : 2.5 V             :         : 4         : N              
-net_packet_o.net_data[19]    : AF25      : output : 2.5 V             :         : 4         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF26      :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF27      :        :                   :         : 5         :                
+net_packet_o.net_data[14]    : AF24      : output : 2.5 V             :         : 4         : N              
+net_packet_i.net_data[16]    : AF25      : input  : 2.5 V             :         : 4         : N              
+data_mem_addr[30]            : AF26      : output : 2.5 V             :         : 4         : N              
+debug_o.barrier_r_f[1]       : AF27      : output : 2.5 V             :         : 5         : N              
 GND                          : AF28      : gnd    :                   :         :           :                
 VCCIO2                       : AG1       : power  :                   : 2.5V    : 2         :                
 GND                          : AG2       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AG3       :        :                   :         : 3         :                
-net_packet_o.reserved[1]     : AG4       : output : 2.5 V             :         : 3         : N              
+to_mem_o.write_data[8]       : AG3       : output : 2.5 V             :         : 3         : N              
+net_packet_i.net_data[23]    : AG4       : input  : 2.5 V             :         : 3         : N              
 GND                          : AG5       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AG6       :        :                   :         : 3         :                
-net_packet_i.reserved[2]     : AG7       : input  : 2.5 V             :         : 3         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AG8       :        :                   :         : 3         :                
+to_mem_o.write_data[17]      : AG6       : output : 2.5 V             :         : 3         : N              
+to_mem_o.write_data[26]      : AG7       : output : 2.5 V             :         : 3         : N              
+to_mem_o.write_data[12]      : AG8       : output : 2.5 V             :         : 3         : N              
 GND                          : AG9       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AG10      :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AG11      :        :                   :         : 3         :                
-data_mem_addr[7]             : AG12      : output : 2.5 V             :         : 3         : N              
+from_mem_i.read_data[27]     : AG10      : input  : 2.5 V             :         : 3         : N              
+from_mem_i.read_data[28]     : AG11      : input  : 2.5 V             :         : 3         : N              
+net_packet_o.net_data[4]     : AG12      : output : 2.5 V             :         : 3         : N              
 GND                          : AG13      : gnd    :                   :         :           :                
 GND+                         : AG14      :        :                   :         : 3         :                
 GND+                         : AG15      :        :                   :         : 4         :                
 GND                          : AG16      : gnd    :                   :         :           :                
-net_packet_i.net_data[3]     : AG17      : input  : 2.5 V             :         : 4         : N              
-net_packet_i.net_data[1]     : AG18      : input  : 2.5 V             :         : 4         : N              
-debug_o.PC_r_f[4]            : AG19      : output : 2.5 V             :         : 4         : N              
+net_packet_i.net_addr[7]     : AG17      : input  : 2.5 V             :         : 4         : N              
+to_mem_o.byte_not_word       : AG18      : output : 2.5 V             :         : 4         : N              
+debug_o.instruction_i_f[10]  : AG19      : output : 2.5 V             :         : 4         : N              
 GND                          : AG20      : gnd    :                   :         :           :                
-net_packet_o.net_data[31]    : AG21      : output : 2.5 V             :         : 4         : N              
-data_mem_addr[4]             : AG22      : output : 2.5 V             :         : 4         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AG23      :        :                   :         : 4         :                
+from_mem_i.valid             : AG21      : input  : 2.5 V             :         : 4         : N              
+from_mem_i.read_data[2]      : AG22      : input  : 2.5 V             :         : 4         : N              
+to_mem_o.write_data[5]       : AG23      : output : 2.5 V             :         : 4         : N              
 GND                          : AG24      : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AG25      :        :                   :         : 4         :                
-net_packet_o.net_addr[12]    : AG26      : output : 2.5 V             :         : 4         : N              
+data_mem_addr[22]            : AG25      : output : 2.5 V             :         : 4         : N              
+net_packet_i.net_addr[6]     : AG26      : input  : 2.5 V             :         : 4         : N              
 GND                          : AG27      : gnd    :                   :         :           :                
 VCCIO5                       : AG28      : power  :                   : 2.5V    : 5         :                
 VCCIO3                       : AH2       : power  :                   : 2.5V    : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AH3       :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AH4       :        :                   :         : 3         :                
+net_packet_i.net_data[21]    : AH3       : input  : 2.5 V             :         : 3         : N              
+to_mem_o.write_data[21]      : AH4       : output : 2.5 V             :         : 3         : N              
 VCCIO3                       : AH5       : power  :                   : 2.5V    : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AH6       :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AH7       :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AH8       :        :                   :         : 3         :                
+from_mem_i.read_data[24]     : AH6       : input  : 2.5 V             :         : 3         : N              
+to_mem_o.write_data[20]      : AH7       : output : 2.5 V             :         : 3         : N              
+to_mem_o.write_data[14]      : AH8       : output : 2.5 V             :         : 3         : N              
 VCCIO3                       : AH9       : power  :                   : 2.5V    : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AH10      :        :                   :         : 3         :                
-net_packet_i.ID[2]           : AH11      : input  : 2.5 V             :         : 3         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AH12      :        :                   :         : 3         :                
+to_mem_o.write_data[24]      : AH10      : output : 2.5 V             :         : 3         : N              
+debug_o.PC_r_f[3]            : AH11      : output : 2.5 V             :         : 3         : N              
+to_mem_o.write_data[25]      : AH12      : output : 2.5 V             :         : 3         : N              
 VCCIO3                       : AH13      : power  :                   : 2.5V    : 3         :                
 GND+                         : AH14      :        :                   :         : 3         :                
 GND+                         : AH15      :        :                   :         : 4         :                
 VCCIO4                       : AH16      : power  :                   : 2.5V    : 4         :                
-data_mem_addr[29]            : AH17      : output : 2.5 V             :         : 4         : N              
-from_mem_i.read_data[26]     : AH18      : input  : 2.5 V             :         : 4         : N              
-net_packet_o.net_data[3]     : AH19      : output : 2.5 V             :         : 4         : N              
+debug_o.instruction_i_f[5]   : AH17      : output : 2.5 V             :         : 4         : N              
+data_mem_addr[2]             : AH18      : output : 2.5 V             :         : 4         : N              
+debug_o.state_r_f[0]         : AH19      : output : 2.5 V             :         : 4         : N              
 VCCIO4                       : AH20      : power  :                   : 2.5V    : 4         :                
-from_mem_i.read_data[28]     : AH21      : input  : 2.5 V             :         : 4         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AH22      :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AH23      :        :                   :         : 4         :                
+to_mem_o.wen                 : AH21      : output : 2.5 V             :         : 4         : N              
+to_mem_o.write_data[29]      : AH22      : output : 2.5 V             :         : 4         : N              
+to_mem_o.valid               : AH23      : output : 2.5 V             :         : 4         : N              
 VCCIO4                       : AH24      : power  :                   : 2.5V    : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH25      :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AH26      :        :                   :         : 4         :                
+net_packet_i.net_op[1]       : AH26      : input  : 2.5 V             :         : 4         : N              
 VCCIO4                       : AH27      : power  :                   : 2.5V    : 4         :                
 VCCIO1                       : B1        : power  :                   : 2.5V    : 1         :                
 GND                          : B2        : gnd    :                   :         :           :                
-net_packet_o.ID[5]           : B3        : output : 2.5 V             :         : 8         : N              
+net_packet_i.net_addr[12]    : B3        : input  : 2.5 V             :         : 8         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : B4        :        :                   :         : 8         :                
 GND                          : B5        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B6        :        :                   :         : 8         :                
-net_packet_o.ID[9]           : B7        : output : 2.5 V             :         : 8         : N              
-to_mem_o.write_data[16]      : B8        : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : B7        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : B8        :        :                   :         : 8         :                
 GND                          : B9        : gnd    :                   :         :           :                
-net_packet_i.net_data[8]     : B10       : input  : 2.5 V             :         : 8         : N              
-to_mem_o.write_data[20]      : B11       : output : 2.5 V             :         : 8         : N              
+net_packet_o.net_data[31]    : B10       : output : 2.5 V             :         : 8         : N              
+data_mem_addr[13]            : B11       : output : 2.5 V             :         : 8         : N              
 GND                          : B12       : gnd    :                   :         :           :                
 GND                          : B13       : gnd    :                   :         :           :                
 GND+                         : B14       :        :                   :         : 8         :                
 net_packet_i.ID[7]           : B15       : input  : 2.5 V             :         : 7         : N              
 GND                          : B16       : gnd    :                   :         :           :                
-debug_o.barrier_mask_r_f[2]  : B17       : output : 2.5 V             :         : 7         : N              
-debug_o.PC_r_f[2]            : B18       : output : 2.5 V             :         : 7         : N              
-debug_o.instruction_i_f[4]   : B19       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : B17       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : B18       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : B19       :        :                   :         : 7         :                
 GND                          : B20       : gnd    :                   :         :           :                
-net_packet_i.net_data[7]     : B21       : input  : 2.5 V             :         : 7         : N              
-net_packet_o.net_addr[5]     : B22       : output : 2.5 V             :         : 7         : N              
-net_packet_i.net_data[4]     : B23       : input  : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : B21       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : B22       :        :                   :         : 7         :                
+net_packet_o.reserved[2]     : B23       : output : 2.5 V             :         : 7         : N              
 GND                          : B24       : gnd    :                   :         :           :                
-net_packet_o.net_addr[1]     : B25       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : B25       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B26       :        :                   :         : 7         :                
 GND                          : B27       : gnd    :                   :         :           :                
 VCCIO6                       : B28       : power  :                   : 2.5V    : 6         :                
@@ -349,27 +349,27 @@ GND                          : C1        : gnd    :                   :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : C2        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C3        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C4        :        :                   :         : 8         :                
-net_packet_o.reserved[3]     : C5        : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C5        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C6        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C7        :        :                   :         : 8         :                
-net_packet_i.net_addr[3]     : C8        : input  : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C8        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C9        :        :                   :         : 8         :                
-net_packet_i.net_data[5]     : C10       : input  : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C10       :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C11       :        :                   :         : 8         :                
-net_packet_o.ID[4]           : C12       : output : 2.5 V             :         : 8         : N              
-net_packet_o.ID[7]           : C13       : output : 2.5 V             :         : 8         : N              
-net_packet_o.ID[6]           : C14       : output : 2.5 V             :         : 8         : N              
-net_packet_o.ID[0]           : C15       : output : 2.5 V             :         : 7         : N              
-from_mem_i.read_data[12]     : C16       : input  : 2.5 V             :         : 7         : N              
-to_mem_o.write_data[28]      : C17       : output : 2.5 V             :         : 7         : N              
-net_packet_o.net_data[25]    : C18       : output : 2.5 V             :         : 7         : N              
-debug_o.instruction_i_f[5]   : C19       : output : 2.5 V             :         : 7         : N              
-from_mem_i.yumi              : C20       : input  : 2.5 V             :         : 7         : N              
-debug_o.PC_r_f[7]            : C21       : output : 2.5 V             :         : 7         : N              
-to_mem_o.write_data[14]      : C22       : output : 2.5 V             :         : 7         : N              
-data_mem_addr[27]            : C23       : output : 2.5 V             :         : 7         : N              
-net_packet_o.net_data[4]     : C24       : output : 2.5 V             :         : 7         : N              
-net_packet_i.net_op[0]       : C25       : input  : 2.5 V             :         : 7         : N              
+to_mem_o.write_data[31]      : C12       : output : 2.5 V             :         : 8         : N              
+debug_o.PC_r_f[5]            : C13       : output : 2.5 V             :         : 8         : N              
+net_packet_o.net_data[11]    : C14       : output : 2.5 V             :         : 8         : N              
+to_mem_o.write_data[0]       : C15       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C16       :        :                   :         : 7         :                
+net_packet_o.net_addr[3]     : C17       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C18       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : C19       :        :                   :         : 7         :                
+net_packet_o.net_addr[13]    : C20       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C21       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : C22       :        :                   :         : 7         :                
+net_packet_i.reserved[2]     : C23       : input  : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C24       :        :                   :         : 7         :                
+net_packet_o.ID[7]           : C25       : output : 2.5 V             :         : 7         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : C26       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C27       :        :                   :         : 6         :                
 GND                          : C28       : gnd    :                   :         :           :                
@@ -377,114 +377,114 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : D1        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : D2        :        :                   :         : 1         :                
 GND                          : D3        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D4        :        :                   :         : 8         :                
-net_packet_i.reserved[3]     : D5        : input  : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D5        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D6        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D7        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D8        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D9        :        :                   :         : 8         :                
-net_packet_i.net_data[15]    : D10       : input  : 2.5 V             :         : 8         : N              
-to_mem_o.write_data[22]      : D11       : output : 2.5 V             :         : 8         : N              
-to_mem_o.write_data[9]       : D12       : output : 2.5 V             :         : 8         : N              
-net_packet_o.net_addr[2]     : D13       : output : 2.5 V             :         : 8         : N              
-net_packet_i.ID[4]           : D14       : input  : 2.5 V             :         : 8         : N              
-from_mem_i.read_data[15]     : D15       : input  : 2.5 V             :         : 7         : N              
-debug_o.barrier_mask_r_f[0]  : D16       : output : 2.5 V             :         : 7         : N              
-debug_o.instruction_i_f[0]   : D17       : output : 2.5 V             :         : 7         : N              
-from_mem_i.read_data[5]      : D18       : input  : 2.5 V             :         : 7         : N              
-from_mem_i.read_data[2]      : D19       : input  : 2.5 V             :         : 7         : N              
-data_mem_addr[25]            : D20       : output : 2.5 V             :         : 7         : N              
-from_mem_i.read_data[22]     : D21       : input  : 2.5 V             :         : 7         : N              
-net_packet_i.ID[1]           : D22       : input  : 2.5 V             :         : 7         : N              
-net_packet_i.net_data[10]    : D23       : input  : 2.5 V             :         : 7         : N              
-barrier_o[0]                 : D24       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D10       :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D11       :        :                   :         : 8         :                
+to_mem_o.write_data[6]       : D12       : output : 2.5 V             :         : 8         : N              
+debug_o.PC_r_f[8]            : D13       : output : 2.5 V             :         : 8         : N              
+from_mem_i.read_data[5]      : D14       : input  : 2.5 V             :         : 8         : N              
+to_mem_o.write_data[1]       : D15       : output : 2.5 V             :         : 7         : N              
+net_packet_i.net_data[11]    : D16       : input  : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D17       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D18       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D19       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D20       :        :                   :         : 7         :                
+net_packet_o.ID[6]           : D21       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D22       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D23       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D24       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D25       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D26       :        :                   :         : 6         :                
-net_packet_o.net_data[30]    : D27       : output : 2.5 V             :         : 6         : N              
-net_packet_i.net_data[30]    : D28       : input  : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D27       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D28       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E1        :        :                   :         : 1         :                
 ~ALTERA_FLASH_nCE_nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : E2        : input  : 2.5 V             :         : 1         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : E3        :        :                   :         : 1         :                
+net_packet_o.reserved[3]     : E3        : output : 2.5 V             :         : 1         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : E4        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E5        :        :                   :         : 1         :                
 VCCIO8                       : E6        : power  :                   : 2.5V    : 8         :                
-debug_o.barrier_r_f[1]       : E7        : output : 2.5 V             :         : 8         : N              
-net_packet_i.net_data[11]    : E8        : input  : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : E7        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E8        :        :                   :         : 8         :                
 VCCIO8                       : E9        : power  :                   : 2.5V    : 8         :                
-net_packet_i.ID[9]           : E10       : input  : 2.5 V             :         : 8         : N              
-data_mem_addr[11]            : E11       : output : 2.5 V             :         : 8         : N              
-net_packet_i.net_data[29]    : E12       : input  : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : E10       :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E11       :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E12       :        :                   :         : 8         :                
 VCCIO8                       : E13       : power  :                   : 2.5V    : 8         :                
-barrier_o[2]                 : E14       : output : 2.5 V             :         : 8         : N              
-debug_o.barrier_r_f[0]       : E15       : output : 2.5 V             :         : 7         : N              
+to_mem_o.write_data[7]       : E14       : output : 2.5 V             :         : 8         : N              
+from_mem_i.read_data[22]     : E15       : input  : 2.5 V             :         : 7         : N              
 VCCIO7                       : E16       : power  :                   : 2.5V    : 7         :                
-debug_o.instruction_i_f[10]  : E17       : output : 2.5 V             :         : 7         : N              
-net_packet_o.net_data[7]     : E18       : output : 2.5 V             :         : 7         : N              
-from_mem_i.read_data[16]     : E19       : input  : 2.5 V             :         : 7         : N              
+debug_o.instruction_i_f[4]   : E17       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : E18       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E19       :        :                   :         : 7         :                
 VCCIO7                       : E20       : power  :                   : 2.5V    : 7         :                
-net_packet_i.net_addr[5]     : E21       : input  : 2.5 V             :         : 7         : N              
-net_packet_i.net_addr[1]     : E22       : input  : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : E21       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E22       :        :                   :         : 7         :                
 VCCIO7                       : E23       : power  :                   : 2.5V    : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E24       :        :                   :         : 6         :                
-net_packet_i.net_data[17]    : E25       : input  : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : E25       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E26       :        :                   :         : 6         :                
-net_packet_i.net_data[14]    : E27       : input  : 2.5 V             :         : 6         : N              
-net_packet_o.net_data[9]     : E28       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : E27       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E28       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F1        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F2        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F3        :        :                   :         : 1         :                
 ~ALTERA_ASDO_DATA1~ / RESERVED_INPUT_WITH_WEAK_PULLUP : F4        : input  : 2.5 V             :         : 1         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : F5        :        :                   :         : 1         :                
 GND                          : F6        : gnd    :                   :         :           :                
-net_packet_o.net_data[12]    : F7        : output : 2.5 V             :         : 8         : N              
-debug_o.barrier_mask_r_f[1]  : F8        : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : F7        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F8        :        :                   :         : 8         :                
 GND                          : F9        : gnd    :                   :         :           :                
-net_packet_o.net_data[15]    : F10       : output : 2.5 V             :         : 8         : N              
-net_packet_o.net_data[5]     : F11       : output : 2.5 V             :         : 8         : N              
-to_mem_o.write_data[6]       : F12       : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : F10       :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F11       :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F12       :        :                   :         : 8         :                
 GND                          : F13       : gnd    :                   :         :           :                
-data_mem_addr[5]             : F14       : output : 2.5 V             :         : 8         : N              
-net_packet_i.net_addr[2]     : F15       : input  : 2.5 V             :         : 7         : N              
+to_mem_o.write_data[15]      : F14       : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : F15       :        :                   :         : 7         :                
 GND                          : F16       : gnd    :                   :         :           :                
-debug_o.PC_r_f[6]            : F17       : output : 2.5 V             :         : 7         : N              
-from_mem_i.read_data[18]     : F18       : input  : 2.5 V             :         : 7         : N              
-to_mem_o.write_data[31]      : F19       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : F17       :        :                   :         : 7         :                
+net_packet_i.reserved[4]     : F18       : input  : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : F19       :        :                   :         : 7         :                
 GND                          : F20       : gnd    :                   :         :           :                
-data_mem_addr[16]            : F21       : output : 2.5 V             :         : 7         : N              
-net_packet_o.net_data[24]    : F22       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : F21       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F22       :        :                   :         : 7         :                
 GND                          : F23       : gnd    :                   :         :           :                
-from_mem_i.read_data[25]     : F24       : input  : 2.5 V             :         : 6         : N              
-net_packet_o.net_data[14]    : F25       : output : 2.5 V             :         : 6         : N              
-debug_o.instruction_i_f[11]  : F26       : output : 2.5 V             :         : 6         : N              
-net_packet_i.net_data[24]    : F27       : input  : 2.5 V             :         : 6         : N              
-net_packet_i.net_data[9]     : F28       : input  : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : F24       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F25       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F26       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F27       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F28       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G1        :        :                   :         : 1         :                
-net_packet_o.net_data[22]    : G2        : output : 2.5 V             :         : 1         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : G2        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G3        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G4        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G5        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G6        :        :                   :         : 1         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : G7        :        :                   :         : 1         :                
-net_packet_i.ID[5]           : G8        : input  : 2.5 V             :         : 8         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : G9        :        :                   :         : 8         :                
-debug_o.barrier_r_f[2]       : G10       : output : 2.5 V             :         : 8         : N              
-net_packet_i.ID[8]           : G11       : input  : 2.5 V             :         : 8         : N              
-net_packet_i.net_data[12]    : G12       : input  : 2.5 V             :         : 8         : N              
-to_mem_o.write_data[8]       : G13       : output : 2.5 V             :         : 8         : N              
-net_packet_i.ID[3]           : G14       : input  : 2.5 V             :         : 8         : N              
-from_mem_i.read_data[8]      : G15       : input  : 2.5 V             :         : 7         : N              
-from_mem_i.read_data[13]     : G16       : input  : 2.5 V             :         : 7         : N              
-debug_o.instruction_i_f[13]  : G17       : output : 2.5 V             :         : 7         : N              
-debug_o.instruction_i_f[8]   : G18       : output : 2.5 V             :         : 7         : N              
-net_packet_o.net_data[10]    : G19       : output : 2.5 V             :         : 7         : N              
-net_packet_o.ID[1]           : G20       : output : 2.5 V             :         : 7         : N              
-net_packet_i.net_addr[8]     : G21       : input  : 2.5 V             :         : 7         : N              
-debug_o.instruction_i_f[7]   : G22       : output : 2.5 V             :         : 6         : N              
-data_mem_addr[9]             : G23       : output : 2.5 V             :         : 6         : N              
-from_mem_i.read_data[31]     : G24       : input  : 2.5 V             :         : 6         : N              
-debug_o.PC_r_f[9]            : G25       : output : 2.5 V             :         : 6         : N              
-debug_o.PC_r_f[3]            : G26       : output : 2.5 V             :         : 6         : N              
-to_mem_o.write_data[10]      : G27       : output : 2.5 V             :         : 6         : N              
-from_mem_i.valid             : G28       : input  : 2.5 V             :         : 6         : N              
+net_packet_i.reserved[3]     : G7        : input  : 2.5 V             :         : 1         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : G8        :        :                   :         : 8         :                
+net_packet_i.net_addr[11]    : G9        : input  : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : G10       :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : G11       :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : G12       :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : G13       :        :                   :         : 8         :                
+from_mem_i.read_data[11]     : G14       : input  : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : G15       :        :                   :         : 7         :                
+net_packet_i.net_op[0]       : G16       : input  : 2.5 V             :         : 7         : N              
+net_packet_i.net_addr[13]    : G17       : input  : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : G18       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : G19       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : G20       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : G21       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : G22       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : G23       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : G24       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : G25       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : G26       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : G27       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : G28       :        :                   :         : 6         :                
 VCCIO1                       : H1        : power  :                   : 2.5V    : 1         :                
 GND                          : H2        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : H3        :        :                   :         : 1         :                
@@ -494,54 +494,54 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : H6        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : H7        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : H8        :        :                   :         : 8         :                
 GNDA3                        : H9        : gnd    :                   :         :           :                
-net_packet_o.net_addr[3]     : H10       : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : H10       :        :                   :         : 8         :                
 VCCIO8                       : H11       : power  :                   : 2.5V    : 8         :                
-to_mem_o.write_data[7]       : H12       : output : 2.5 V             :         : 8         : N              
-net_packet_o.net_data[29]    : H13       : output : 2.5 V             :         : 8         : N              
-debug_o.PC_r_f[0]            : H14       : output : 2.5 V             :         : 7         : N              
-debug_o.instruction_i_f[6]   : H15       : output : 2.5 V             :         : 7         : N              
-from_mem_i.read_data[11]     : H16       : input  : 2.5 V             :         : 7         : N              
-debug_o.PC_r_f[1]            : H17       : output : 2.5 V             :         : 7         : N              
+from_mem_i.read_data[6]      : H12       : input  : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : H13       :        :                   :         : 8         :                
+net_packet_i.net_addr[3]     : H14       : input  : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : H15       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : H16       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : H17       :        :                   :         : 7         :                
 VCCIO7                       : H18       : power  :                   : 2.5V    : 7         :                
-data_mem_addr[13]            : H19       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : H19       :        :                   :         : 7         :                
 GNDA2                        : H20       : gnd    :                   :         :           :                
-data_mem_addr[12]            : H21       : output : 2.5 V             :         : 6         : N              
-debug_o.instruction_i_f[15]  : H22       : output : 2.5 V             :         : 6         : N              
-net_packet_i.net_data[28]    : H23       : input  : 2.5 V             :         : 6         : N              
-net_packet_o.net_data[6]     : H24       : output : 2.5 V             :         : 6         : N              
-debug_o.PC_r_f[8]            : H25       : output : 2.5 V             :         : 6         : N              
-data_mem_addr[30]            : H26       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : H21       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : H22       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : H23       :        :                   :         : 6         :                
+net_packet_o.net_data[5]     : H24       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : H25       :        :                   :         : 6         :                
+net_packet_o.net_data[22]    : H26       : output : 2.5 V             :         : 6         : N              
 GND                          : H27       : gnd    :                   :         :           :                
 VCCIO6                       : H28       : power  :                   : 2.5V    : 6         :                
 clk                          : J1        : input  : 2.5 V             :         : 1         : N              
 GND                          : J2        : gnd    :                   :         :           :                
-net_packet_i.net_data[22]    : J3        : input  : 2.5 V             :         : 1         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : J3        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : J4        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : J5        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : J6        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : J7        :        :                   :         : 1         :                
 VCCA3                        : J8        : power  :                   : 2.5V    :           :                
 VCCD_PLL3                    : J9        : power  :                   : 1.2V    :           :                
-net_packet_o.ID[8]           : J10       : output : 2.5 V             :         : 8         : N              
+net_packet_o.net_addr[12]    : J10       : output : 2.5 V             :         : 8         : N              
 GND                          : J11       : gnd    :                   :         :           :                
-to_mem_o.write_data[17]      : J12       : output : 2.5 V             :         : 8         : N              
+from_mem_i.read_data[14]     : J12       : input  : 2.5 V             :         : 8         : N              
 VCCIO8                       : J13       : power  :                   : 2.5V    : 8         :                
-net_packet_i.ID[0]           : J14       : input  : 2.5 V             :         : 7         : N              
+from_mem_i.read_data[31]     : J14       : input  : 2.5 V             :         : 7         : N              
 VCCIO7                       : J15       : power  :                   : 2.5V    : 7         :                
-debug_o.instruction_i_f[3]   : J16       : output : 2.5 V             :         : 7         : N              
-debug_o.PC_r_f[5]            : J17       : output : 2.5 V             :         : 7         : N              
+net_packet_o.net_op[0]       : J16       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : J17       :        :                   :         : 7         :                
 GND                          : J18       : gnd    :                   :         :           :                
-net_packet_o.net_addr[8]     : J19       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : J19       :        :                   :         : 7         :                
 VCCD_PLL2                    : J20       : power  :                   : 1.2V    :           :                
 VCCA2                        : J21       : power  :                   : 2.5V    :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : J22       :        :                   :         : 6         :                
-debug_o.instruction_i_f[12]  : J23       : output : 2.5 V             :         : 6         : N              
-data_mem_addr[14]            : J24       : output : 2.5 V             :         : 6         : N              
-exception_o                  : J25       : output : 2.5 V             :         : 6         : N              
-net_packet_i.net_data[20]    : J26       : input  : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : J23       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : J24       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : J25       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : J26       :        :                   :         : 6         :                
 from_mem_i.read_data[0]      : J27       : input  : 2.5 V             :         : 6         : N              
 reset                        : J28       : input  : 2.5 V             :         : 6         : N              
-to_mem_o.write_data[12]      : K1        : output : 2.5 V             :         : 1         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : K1        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : K2        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : K3        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : K4        :        :                   :         : 1         :                
@@ -553,22 +553,22 @@ VCCINT                       : K9        : power  :                   : 1.2V    
 GND                          : K10       : gnd    :                   :         :           :                
 VCCINT                       : K11       : power  :                   : 1.2V    :           :                
 GND                          : K12       : gnd    :                   :         :           :                
-net_packet_o.ID[3]           : K13       : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : K13       :        :                   :         : 8         :                
 GND                          : K14       : gnd    :                   :         :           :                
-data_mem_addr[15]            : K15       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : K15       :        :                   :         : 7         :                
 GND                          : K16       : gnd    :                   :         :           :                
 VCCINT                       : K17       : power  :                   : 1.2V    :           :                
 GND                          : K18       : gnd    :                   :         :           :                
 VCCINT                       : K19       : power  :                   : 1.2V    :           :                
 GND                          : K20       : gnd    :                   :         :           :                
-from_mem_i.read_data[7]      : K21       : input  : 2.5 V             :         : 6         : N              
-data_mem_addr[3]             : K22       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : K21       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : K22       :        :                   :         : 6         :                
 GND                          : K23       : gnd    :                   :         :           :                
 VCCIO6                       : K24       : power  :                   : 2.5V    : 6         :                
-data_mem_addr[22]            : K25       : output : 2.5 V             :         : 6         : N              
-debug_o.state_r_f[0]         : K26       : output : 2.5 V             :         : 6         : N              
-from_mem_i.read_data[9]      : K27       : input  : 2.5 V             :         : 6         : N              
-net_packet_o.net_data[17]    : K28       : output : 2.5 V             :         : 6         : N              
+net_packet_i.ID[4]           : K25       : input  : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : K26       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : K27       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : K28       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : L1        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : L2        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : L3        :        :                   :         : 1         :                
@@ -588,15 +588,15 @@ VCCINT                       : L16       : power  :                   : 1.2V    
 GND                          : L17       : gnd    :                   :         :           :                
 VCCINT                       : L18       : power  :                   : 1.2V    :           :                
 GND                          : L19       : gnd    :                   :         :           :                
-from_mem_i.read_data[4]      : L20       : input  : 2.5 V             :         : 6         : N              
+net_packet_i.net_data[5]     : L20       : input  : 2.5 V             :         : 6         : N              
 VCCIO6                       : L21       : power  :                   : 2.5V    : 6         :                
-data_mem_addr[1]             : L22       : output : 2.5 V             :         : 6         : N              
-from_mem_i.read_data[6]      : L23       : input  : 2.5 V             :         : 6         : N              
-net_packet_o.net_data[28]    : L24       : output : 2.5 V             :         : 6         : N              
-data_mem_addr[31]            : L25       : output : 2.5 V             :         : 6         : N              
-net_packet_o.net_data[20]    : L26       : output : 2.5 V             :         : 6         : N              
-to_mem_o.yumi                : L27       : output : 2.5 V             :         : 6         : N              
-to_mem_o.wen                 : L28       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : L22       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : L23       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : L24       :        :                   :         : 6         :                
+net_packet_o.ID[5]           : L25       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : L26       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : L27       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : L28       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : M1        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : M2        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : M3        :        :                   :         : 1         :                
@@ -617,17 +617,17 @@ VCCINT                       : M17       : power  :                   : 1.2V    
 GND                          : M18       : gnd    :                   :         :           :                
 VCCINT                       : M19       : power  :                   : 1.2V    :           :                
 GND                          : M20       : gnd    :                   :         :           :                
-net_packet_i.net_data[6]     : M21       : input  : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : M21       :        :                   :         : 6         :                
 MSEL2                        : M22       :        :                   :         : 6         :                
-data_mem_addr[8]             : M23       : output : 2.5 V             :         : 6         : N              
-data_mem_addr[17]            : M24       : output : 2.5 V             :         : 6         : N              
-debug_o.state_r_f[1]         : M25       : output : 2.5 V             :         : 6         : N              
-from_mem_i.read_data[3]      : M26       : input  : 2.5 V             :         : 6         : N              
-from_mem_i.read_data[17]     : M27       : input  : 2.5 V             :         : 6         : N              
-data_mem_addr[2]             : M28       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : M23       :        :                   :         : 6         :                
+net_packet_o.ID[4]           : M24       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : M25       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : M26       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : M27       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : M28       :        :                   :         : 6         :                
 VCCIO1                       : N1        : power  :                   : 2.5V    : 1         :                
 GND                          : N2        : gnd    :                   :         :           :                
-to_mem_o.write_data[24]      : N3        : output : 2.5 V             :         : 1         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : N3        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : N4        :        :                   :         : 1         :                
 VCCIO1                       : N5        : power  :                   : 2.5V    : 1         :                
 GND                          : N6        : gnd    :                   :         :           :                
@@ -645,16 +645,16 @@ GND                          : N17       : gnd    :                   :         
 VCCINT                       : N18       : power  :                   : 1.2V    :           :                
 GND                          : N19       : gnd    :                   :         :           :                
 VCCINT                       : N20       : power  :                   : 1.2V    :           :                
-from_mem_i.read_data[29]     : N21       : input  : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : N21       :        :                   :         : 6         :                
 MSEL0                        : N22       :        :                   :         : 6         :                
 GND                          : N23       : gnd    :                   :         :           :                
 VCCIO6                       : N24       : power  :                   : 2.5V    : 6         :                
-from_mem_i.read_data[24]     : N25       : input  : 2.5 V             :         : 6         : N              
-from_mem_i.read_data[10]     : N26       : input  : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : N25       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : N26       :        :                   :         : 6         :                
 GND                          : N27       : gnd    :                   :         :           :                
 VCCIO6                       : N28       : power  :                   : 2.5V    : 6         :                
-from_mem_i.read_data[21]     : P1        : input  : 2.5 V             :         : 1         : N              
-to_mem_o.write_data[19]      : P2        : output : 2.5 V             :         : 1         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : P1        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : P2        :        :                   :         : 1         :                
 ~ALTERA_DCLK~                : P3        : output : 2.5 V             :         : 1         : N              
 nCONFIG                      : P4        :        :                   :         : 1         :                
 TCK                          : P5        : input  :                   :         : 1         :                
@@ -673,17 +673,17 @@ VCCINT                       : P17       : power  :                   : 1.2V    
 GND                          : P18       : gnd    :                   :         :           :                
 VCCINT                       : P19       : power  :                   : 1.2V    :           :                
 GND                          : P20       : gnd    :                   :         :           :                
-net_packet_o.net_data[23]    : P21       : output : 2.5 V             :         : 5         : N              
+net_packet_i.net_data[12]    : P21       : input  : 2.5 V             :         : 5         : N              
 MSEL3                        : P22       :        :                   :         : 6         :                
 MSEL1                        : P23       :        :                   :         : 6         :                
 CONF_DONE                    : P24       :        :                   :         : 6         :                
-from_mem_i.read_data[27]     : P25       : input  : 2.5 V             :         : 6         : N              
-from_mem_i.read_data[14]     : P26       : input  : 2.5 V             :         : 6         : N              
-from_mem_i.read_data[23]     : P27       : input  : 2.5 V             :         : 6         : N              
+net_packet_i.ID[5]           : P25       : input  : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : P26       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : P27       :        :                   :         : 6         :                
 ~ALTERA_nCEO~ / RESERVED_OUTPUT_OPEN_DRAIN : P28       : output : 2.5 V             :         : 6         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : R1        :        :                   :         : 2         :                
-net_packet_i.net_addr[6]     : R2        : input  : 2.5 V             :         : 2         : N              
-to_mem_o.write_data[3]       : R3        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : R2        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : R3        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : R4        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : R5        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : R6        :        :                   :         : 2         :                
@@ -701,23 +701,23 @@ GND                          : R17       : gnd    :                   :         
 VCCINT                       : R18       : power  :                   : 1.2V    :           :                
 GND                          : R19       : gnd    :                   :         :           :                
 VCCINT                       : R20       : power  :                   : 1.2V    :           :                
-net_packet_i.net_data[23]    : R21       : input  : 2.5 V             :         : 5         : N              
-to_mem_o.write_data[30]      : R22       : output : 2.5 V             :         : 5         : N              
-data_mem_addr[28]            : R23       : output : 2.5 V             :         : 5         : N              
-to_mem_o.byte_not_word       : R24       : output : 2.5 V             :         : 5         : N              
-data_mem_addr[20]            : R25       : output : 2.5 V             :         : 5         : N              
-data_mem_addr[18]            : R26       : output : 2.5 V             :         : 5         : N              
-data_mem_addr[26]            : R27       : output : 2.5 V             :         : 5         : N              
-data_mem_addr[6]             : R28       : output : 2.5 V             :         : 5         : N              
+to_mem_o.write_data[3]       : R21       : output : 2.5 V             :         : 5         : N              
+debug_o.PC_r_f[6]            : R22       : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : R23       :        :                   :         : 5         :                
+net_packet_o.net_data[26]    : R24       : output : 2.5 V             :         : 5         : N              
+net_packet_o.ID[9]           : R25       : output : 2.5 V             :         : 5         : N              
+from_mem_i.read_data[18]     : R26       : input  : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : R27       :        :                   :         : 5         :                
+net_packet_i.ID[1]           : R28       : input  : 2.5 V             :         : 5         : N              
 VCCIO2                       : T1        : power  :                   : 2.5V    : 2         :                
 GND                          : T2        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : T3        :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : T4        :        :                   :         : 2         :                
+net_packet_i.reserved[0]     : T3        : input  : 2.5 V             :         : 2         : N              
+net_packet_o.reserved[0]     : T4        : output : 2.5 V             :         : 2         : N              
 VCCIO2                       : T5        : power  :                   : 2.5V    : 2         :                
 GND                          : T6        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : T7        :        :                   :         : 2         :                
+net_packet_i.net_data[29]    : T7        : input  : 2.5 V             :         : 2         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : T8        :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : T9        :        :                   :         : 2         :                
+debug_o.PC_r_f[1]            : T9        : output : 2.5 V             :         : 2         : N              
 GND                          : T10       : gnd    :                   :         :           :                
 VCCINT                       : T11       : power  :                   : 1.2V    :           :                
 GND                          : T12       : gnd    :                   :         :           :                
@@ -729,22 +729,22 @@ VCCINT                       : T17       : power  :                   : 1.2V    
 GND                          : T18       : gnd    :                   :         :           :                
 VCCINT                       : T19       : power  :                   : 1.2V    :           :                
 GND                          : T20       : gnd    :                   :         :           :                
-from_mem_i.read_data[19]     : T21       : input  : 2.5 V             :         : 5         : N              
-to_mem_o.write_data[21]      : T22       : output : 2.5 V             :         : 5         : N              
+net_packet_o.ID[1]           : T21       : output : 2.5 V             :         : 5         : N              
+net_packet_i.ID[9]           : T22       : input  : 2.5 V             :         : 5         : N              
 GND                          : T23       : gnd    :                   :         :           :                
 VCCIO5                       : T24       : power  :                   : 2.5V    : 5         :                
-to_mem_o.write_data[4]       : T25       : output : 2.5 V             :         : 5         : N              
-net_packet_o.net_addr[4]     : T26       : output : 2.5 V             :         : 5         : N              
+net_packet_o.net_data[12]    : T25       : output : 2.5 V             :         : 5         : N              
+net_packet_o.ID[3]           : T26       : output : 2.5 V             :         : 5         : N              
 GND                          : T27       : gnd    :                   :         :           :                
 VCCIO5                       : T28       : power  :                   : 2.5V    : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : U1        :        :                   :         : 2         :                
-net_packet_o.net_addr[6]     : U2        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : U2        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : U3        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : U4        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : U5        :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : U6        :        :                   :         : 2         :                
+to_mem_o.write_data[2]       : U6        : output : 2.5 V             :         : 2         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : U7        :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : U8        :        :                   :         : 2         :                
+net_packet_o.net_data[24]    : U8        : output : 2.5 V             :         : 2         : N              
 GND                          : U9        : gnd    :                   :         :           :                
 VCCINT                       : U10       : power  :                   : 1.2V    :           :                
 GND                          : U11       : gnd    :                   :         :           :                
@@ -756,23 +756,23 @@ VCCINT                       : U16       : power  :                   : 1.2V    
 GND                          : U17       : gnd    :                   :         :           :                
 VCCINT                       : U18       : power  :                   : 1.2V    :           :                
 GND                          : U19       : gnd    :                   :         :           :                
-net_packet_i.net_op[1]       : U20       : input  : 2.5 V             :         : 5         : N              
+barrier_o[2]                 : U20       : output : 2.5 V             :         : 5         : N              
 VCCIO5                       : U21       : power  :                   : 2.5V    : 5         :                
-to_mem_o.write_data[13]      : U22       : output : 2.5 V             :         : 5         : N              
-to_mem_o.write_data[18]      : U23       : output : 2.5 V             :         : 5         : N              
-net_packet_o.net_data[16]    : U24       : output : 2.5 V             :         : 5         : N              
-data_mem_addr[10]            : U25       : output : 2.5 V             :         : 5         : N              
-net_packet_i.net_data[16]    : U26       : input  : 2.5 V             :         : 5         : N              
-to_mem_o.write_data[26]      : U27       : output : 2.5 V             :         : 5         : N              
-net_packet_i.net_data[27]    : U28       : input  : 2.5 V             :         : 5         : N              
+net_packet_o.ID[0]           : U22       : output : 2.5 V             :         : 5         : N              
+barrier_o[1]                 : U23       : output : 2.5 V             :         : 5         : N              
+debug_o.instruction_i_f[13]  : U24       : output : 2.5 V             :         : 5         : N              
+net_packet_i.net_data[26]    : U25       : input  : 2.5 V             :         : 5         : N              
+barrier_o[0]                 : U26       : output : 2.5 V             :         : 5         : N              
+to_mem_o.write_data[10]      : U27       : output : 2.5 V             :         : 5         : N              
+net_packet_o.ID[2]           : U28       : output : 2.5 V             :         : 5         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : V1        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : V2        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : V3        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : V4        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : V5        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : V6        :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : V7        :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : V8        :        :                   :         : 2         :                
+debug_o.PC_r_f[4]            : V7        : output : 2.5 V             :         : 2         : N              
+from_mem_i.read_data[13]     : V8        : input  : 2.5 V             :         : 2         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : V9        :        :                   :         : 2         :                
 GND                          : V10       : gnd    :                   :         :           :                
 VCCINT                       : V11       : power  :                   : 1.2V    :           :                
@@ -784,15 +784,15 @@ GND                          : V16       : gnd    :                   :         
 VCCINT                       : V17       : power  :                   : 1.2V    :           :                
 GND                          : V18       : gnd    :                   :         :           :                
 VCCINT                       : V19       : power  :                   : 1.2V    :           :                
-to_mem_o.write_data[2]       : V20       : output : 2.5 V             :         : 5         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : V21       :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : V22       :        :                   :         : 5         :                
-net_packet_o.net_data[27]    : V23       : output : 2.5 V             :         : 5         : N              
-data_mem_addr[0]             : V24       : output : 2.5 V             :         : 5         : N              
-to_mem_o.write_data[27]      : V25       : output : 2.5 V             :         : 5         : N              
-net_packet_o.net_addr[13]    : V26       : output : 2.5 V             :         : 5         : N              
-net_packet_o.net_op[2]       : V27       : output : 2.5 V             :         : 5         : N              
-net_packet_o.net_op[1]       : V28       : output : 2.5 V             :         : 5         : N              
+net_packet_i.net_data[22]    : V20       : input  : 2.5 V             :         : 5         : N              
+net_packet_o.net_data[9]     : V21       : output : 2.5 V             :         : 5         : N              
+debug_o.instruction_i_f[12]  : V22       : output : 2.5 V             :         : 5         : N              
+net_packet_i.ID[2]           : V23       : input  : 2.5 V             :         : 5         : N              
+from_mem_i.read_data[19]     : V24       : input  : 2.5 V             :         : 5         : N              
+debug_o.PC_r_f[7]            : V25       : output : 2.5 V             :         : 5         : N              
+net_packet_o.net_data[3]     : V26       : output : 2.5 V             :         : 5         : N              
+to_mem_o.write_data[30]      : V27       : output : 2.5 V             :         : 5         : N              
+debug_o.barrier_mask_r_f[0]  : V28       : output : 2.5 V             :         : 5         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : W1        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : W2        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : W3        :        :                   :         : 2         :                
@@ -800,52 +800,52 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : W4        :        :                   :      
 VCCIO2                       : W5        : power  :                   : 2.5V    : 2         :                
 GND                          : W6        : gnd    :                   :         :           :                
 VCCIO2                       : W7        : power  :                   : 2.5V    : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : W8        :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : W9        :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : W10       :        :                   :         : 3         :                
+data_mem_addr[1]             : W8        : output : 2.5 V             :         : 2         : N              
+from_mem_i.read_data[8]      : W9        : input  : 2.5 V             :         : 2         : N              
+to_mem_o.write_data[27]      : W10       : output : 2.5 V             :         : 3         : N              
 GND                          : W11       : gnd    :                   :         :           :                
 VCCINT                       : W12       : power  :                   : 1.2V    :           :                
 GND                          : W13       : gnd    :                   :         :           :                
 VCCINT                       : W14       : power  :                   : 1.2V    :           :                
 GND                          : W15       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : W16       :        :                   :         : 4         :                
+debug_o.instruction_i_f[0]   : W16       : output : 2.5 V             :         : 4         : N              
 GND                          : W17       : gnd    :                   :         :           :                
 VCCINT                       : W18       : power  :                   : 1.2V    :           :                
 GND                          : W19       : gnd    :                   :         :           :                
-net_packet_i.net_addr[4]     : W20       : input  : 2.5 V             :         : 5         : N              
-net_packet_i.net_data[26]    : W21       : input  : 2.5 V             :         : 5         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : W22       :        :                   :         : 5         :                
+net_packet_i.ID[3]           : W20       : input  : 2.5 V             :         : 5         : N              
+net_packet_i.net_data[2]     : W21       : input  : 2.5 V             :         : 5         : N              
+net_packet_i.ID[8]           : W22       : input  : 2.5 V             :         : 5         : N              
 GND                          : W23       : gnd    :                   :         :           :                
 VCCIO5                       : W24       : power  :                   : 2.5V    : 5         :                
-to_mem_o.write_data[0]       : W25       : output : 2.5 V             :         : 5         : N              
-net_packet_i.net_addr[9]     : W26       : input  : 2.5 V             :         : 5         : N              
-to_mem_o.write_data[11]      : W27       : output : 2.5 V             :         : 5         : N              
-data_mem_addr[24]            : W28       : output : 2.5 V             :         : 5         : N              
+to_mem_o.yumi                : W25       : output : 2.5 V             :         : 5         : N              
+to_mem_o.write_data[9]       : W26       : output : 2.5 V             :         : 5         : N              
+debug_o.barrier_mask_r_f[1]  : W27       : output : 2.5 V             :         : 5         : N              
+from_mem_i.read_data[9]      : W28       : input  : 2.5 V             :         : 5         : N              
 GND+                         : Y1        :        :                   :         : 2         :                
 GND+                         : Y2        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y3        :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : Y4        :        :                   :         : 2         :                
+to_mem_o.write_data[18]      : Y4        : output : 2.5 V             :         : 2         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y5        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y6        :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : Y7        :        :                   :         : 2         :                
+net_packet_o.net_data[29]    : Y7        : output : 2.5 V             :         : 2         : N              
 VCCA1                        : Y8        : power  :                   : 2.5V    :           :                
 VCCD_PLL1                    : Y9        : power  :                   : 1.2V    :           :                
-net_packet_i.reserved[1]     : Y10       : input  : 2.5 V             :         : 3         : N              
+net_packet_o.net_data[20]    : Y10       : output : 2.5 V             :         : 3         : N              
 GND                          : Y11       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : Y12       :        :                   :         : 3         :                
-net_packet_o.reserved[2]     : Y13       : output : 2.5 V             :         : 3         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : Y14       :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : Y15       :        :                   :         : 3         :                
+net_packet_o.net_data[6]     : Y12       : output : 2.5 V             :         : 3         : N              
+from_mem_i.read_data[21]     : Y13       : input  : 2.5 V             :         : 3         : N              
+net_packet_o.net_data[25]    : Y14       : output : 2.5 V             :         : 3         : N              
+data_mem_addr[14]            : Y15       : output : 2.5 V             :         : 3         : N              
 VCCIO4                       : Y16       : power  :                   : 2.5V    : 4         :                
-net_packet_i.net_data[19]    : Y17       : input  : 2.5 V             :         : 4         : N              
+debug_o.instruction_i_f[8]   : Y17       : output : 2.5 V             :         : 4         : N              
 GND                          : Y18       : gnd    :                   :         :           :                
-net_packet_i.net_data[21]    : Y19       : input  : 2.5 V             :         : 4         : N              
+net_packet_o.net_data[30]    : Y19       : output : 2.5 V             :         : 4         : N              
 VCCD_PLL4                    : Y20       : power  :                   : 1.2V    :           :                
 VCCA4                        : Y21       : power  :                   : 2.5V    :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : Y22       :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : Y23       :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : Y24       :        :                   :         : 5         :                
-to_mem_o.write_data[29]      : Y25       : output : 2.5 V             :         : 5         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : Y26       :        :                   :         : 5         :                
+net_packet_o.net_addr[4]     : Y22       : output : 2.5 V             :         : 5         : N              
+net_packet_o.net_data[0]     : Y23       : output : 2.5 V             :         : 5         : N              
+debug_o.instruction_i_f[6]   : Y24       : output : 2.5 V             :         : 5         : N              
+net_packet_i.ID[0]           : Y25       : input  : 2.5 V             :         : 5         : N              
+data_mem_addr[19]            : Y26       : output : 2.5 V             :         : 5         : N              
 GND+                         : Y27       :        :                   :         : 5         :                
 GND+                         : Y28       :        :                   :         : 5         :                
